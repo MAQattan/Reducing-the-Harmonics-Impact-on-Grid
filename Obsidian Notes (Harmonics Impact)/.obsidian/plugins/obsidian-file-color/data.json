@@ -1,0 +1,49 @@
+{
+  "cascadeColors": false,
+  "colorBackground": false,
+  "palette": [
+    {
+      "id": "YwrTZyo10CQ4vyvkRKcE1",
+      "name": "",
+      "value": "#b8683d"
+    },
+    {
+      "id": "OzuJtQi8yEPTDBYLXj65h",
+      "name": "",
+      "value": "#e55252"
+    },
+    {
+      "id": "GQvEJKUXRJXwUeZGLnnmO",
+      "name": "",
+      "value": "#b662bc"
+    },
+    {
+      "id": "9slm1t1A0dsaN_gceCeXn",
+      "name": "",
+      "value": "#5491b0"
+    },
+    {
+      "id": "vLfffDf3a38ilpVXLu4DP",
+      "name": "",
+      "value": "#bfbc69"
+    }
+  ],
+  "fileColors": [
+    {
+      "path": "Thesis",
+      "color": "OzuJtQi8yEPTDBYLXj65h"
+    },
+    {
+      "path": "Presentation",
+      "color": "GQvEJKUXRJXwUeZGLnnmO"
+    },
+    {
+      "path": "Accessories",
+      "color": "9slm1t1A0dsaN_gceCeXn"
+    },
+    {
+      "path": "Attachments",
+      "color": "vLfffDf3a38ilpVXLu4DP"
+    }
+  ]
+}

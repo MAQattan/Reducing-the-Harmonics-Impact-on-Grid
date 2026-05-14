@@ -1,0 +1,44 @@
+% --- 1. تعريف نوع المستند وتفعيل الطباعة على الوجهين ---
+\documentclass[12pt, a4paper, twoside]{article} % استخدام صنف المقال مع تفعيل الهوامش المتقابلة [38، 126، 410]
+
+% --- 2. ضبط الهوامش وهامش التجليد (Binding Offset) ---
+% الهامش الداخلي (inner) يتغير مكانه تلقائياً بين اليمين واليسار حسب رقم الصفحة
+\usepackage[inner=3cm, outer=2cm, top=2.5cm, bottom=2.5cm, bindingoffset=1cm]{geometry} % تخصيص مساحة إضافية للتجليد
+
+% --- 3. حزم اللغة والخطوط (إعدادات LuaLaTeX) ---
+\usepackage{fontspec} % الحزمة الأساسية للتعامل مع الخطوط في LuaLaTeX
+\usepackage{polyglossia} % لإدارة اللغات المتعددة وتنسيقها
+\usepackage{luabidi} % ضروري لضبط اتجاه النص من اليمين إلى اليسار في محرك LuaLaTeX
+
+\setmainlanguage[numerals=western]{arabic} % تعيين العربية لغة أساسية مع استخدام الأرقام الغربية (1, 2, 3)
+\setotherlanguage{english} % تعيين الإنجليزية لغة ثانوية
+
+% --- تعريف الخطوط المخصصة ---
+\newfontfamily\arabicfont[Script=Arabic, Scale=1.2]{Sakkal Majalla} % تعيين خطك المفضل للنصوص العربية مع ضبط الحجم
+\newfontfamily\englishfont{Latin Modern Roman} % الخط الافتراضي للنصوص اللاتينية 
+% --- 4. حزم إضافية من مشاريعك السابقة لضمان الاحترافية ---
+\usepackage{amsmath, amssymb} % لكتابة المعادلات والرموز الرياضية المعقدة 
+\usepackage{graphicx} % لإدراج الصور والتحكم بمقاساتها
+\usepackage{float} % لتثبيت أماكن الصور والجداول بدقة باستخدام [H]
+\usepackage{xcolor} % لإدارة الألوان وتمييز النصوص
+\usepackage{hyperref} % لإنشاء روابط تفاعلية داخل المستند 
+% --- 5. اختصارات مخصصة لسرعة الكتابة ---
+\newcommand{\al}{\textarabic} % اختصار لكتابة نص عربي قصير 
+\newcommand{\el}{\textenglish} % اختصار لكتابة مصطلحات إنجليزية داخل النص العربي
+
+\graphicspath{{images/}} % تحديد مجلد الصور لإدراجها بسهولة باستخدام \includegraphics{}
+
+% --- بداية متن المستند ---
+\begin{document}
+
+\title{عنوان مستندك الاحترافي}
+\author{اسمك الكريم}
+\date{\today}
+\maketitle
+
+\tableofcontents % إنشاء الفهرس تلقائياً
+\newpage % بدء المحتوى في صفحة جديدة
+
+% ابدأ كتابة محتواك هنا باستخدام \section{} و \subsection{}
+
+\end{document}

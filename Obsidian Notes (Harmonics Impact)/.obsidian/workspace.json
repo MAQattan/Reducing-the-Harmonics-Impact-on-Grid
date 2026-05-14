@@ -1,0 +1,262 @@
+{
+  "main": {
+    "id": "5499e544f12fca6b",
+    "type": "split",
+    "children": [
+      {
+        "id": "834dd7c21696fc19",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "562f1a8c319380d1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tempurory Notes/Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3041e0d3f8489f02",
+    "type": "split",
+    "children": [
+      {
+        "id": "79a86cef62c5f719",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6adbd31d8b5f4e67",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "15cdadb31ac40c76",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#ToRefactor",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e83bd51581663fa4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 305.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "ace5c1d822e686cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "939a737d12d1fab8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e6ebaf7f90ca05ee",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Tempurory Notes/Untitled.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Untitled"
+            }
+          },
+          {
+            "id": "fe3ac19d7166e486",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Thesis/References.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from References"
+            }
+          },
+          {
+            "id": "12925e210e3a8cbf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6a39adf218223b2e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "dc0ba2ddfbc83ba0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Accessories/Accessories MOC.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Accessories MOC"
+            }
+          },
+          {
+            "id": "1c99ff1f462d7e15",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          }
+        ]
+      },
+      {
+        "id": "1a82e6aabb1d5639",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91651f1a5e4586fb",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 246.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false
+    }
+  },
+  "active": "562f1a8c319380d1",
+  "lastOpenFiles": [
+    "Prompts.md",
+    "Tempurory Notes/Untitled.md",
+    "Notes/Arabic Preamble sample 1.md",
+    "Tempurory Notes/2.md",
+    "Tempurory Notes/About LaTeX Commands.md",
+    "Notes/Note 1.md",
+    "Notes/Note 2.md",
+    "Tempurory Notes",
+    "Thesis/9/الفصل التاسع - تصميم المنظومة الشمسية المتصلة بالشبكة.md",
+    "Next Step.md",
+    "Thesis/9/الجدوى والقرار الإنشائي (أو التحليل التقني - الاقتصادي المختصر).md",
+    "Accessories/Index.md",
+    "Thesis/References.md",
+    "Thesis/Appendices/الملحق (أ).md",
+    "Thesis/9/التوجيه الجغرافي وزاوية الميل المثالية (Orientation and Optimal Tilt Angle).md",
+    "Thesis/9/الظلال والمسافة بين الألواح/تحليل الظلال.md",
+    "Thesis/9/Attachments/Illustration of Correction Angle (D_Lat) .png",
+    "Thesis/Thesis MOC.md",
+    "Graduation Project MOC.md",
+    "Thesis/9/ملاحظاتي على حساباتك.md",
+    "Thesis/8/التطبيق على مدينة حلب.md",
+    "Thesis/9/تحديد عدد الألواح بناءا على المساحة المتاحة.md",
+    "Accessories/Accessories MOC.md",
+    "Thesis/9/الطريقة الهياكل المتدرجة (Terraced Mounting).md",
+    "الطريقة الهياكل المتدرجة (Stepped/Terraced Mounting).md",
+    "الطريقة الهياكل المتدرجة (Stepped",
+    "Draft.md",
+    "Thesis/9/Attachments/Illustration of Correction Angle(1).jpg",
+    "Thesis/9/Attachments/Illustration of Correction Angle3.jpg",
+    "Attachments/Index 01.jpg",
+    "Attachments/Index 02.png",
+    "Attachments/Index 03.png",
+    "Thesis/8/التوجيه الجغرافي للألواح (Azimuth - Orientation).md",
+    "Attachments/Screenshot 2026-05-06 171509.png",
+    "Attachments/Screenshot 2026-05-06 171536.png",
+    "Attachments/Screenshot 2026-04-25 154814.png",
+    "Attachments/Screenshot 2026-04-16 203504.png",
+    "Thesis/Appendices/Attachments",
+    "Thesis/9/الظلال والمسافة بين الألواح/Attachments",
+    "Thesis/9/Attachments",
+    "Thesis/Attachments",
+    "Clippings",
+    "Attachments",
+    "Thesis/Appendices/Attachments/SUN2000-8_10_12_15_17_20KTL-M2.pdf",
+    "Thesis/Appendices/Attachments/L_Gi_LE_PM_T_PMD_059_F133_LR_5_72_HTH_590_600_M_V2_30_30_and_15_Frame_Scientist_V19_EN_pdf_26bcba7569.pdf"
+  ]
+}

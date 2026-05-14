@@ -1,0 +1,255 @@
+{
+  "main": {
+    "id": "5499e544f12fca6b",
+    "type": "split",
+    "children": [
+      {
+        "id": "438fe17324461a28",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d7b8481c00602437",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3041e0d3f8489f02",
+    "type": "split",
+    "children": [
+      {
+        "id": "79a86cef62c5f719",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6adbd31d8b5f4e67",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "15cdadb31ac40c76",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#ToRefactor",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e83bd51581663fa4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 287.5
+  },
+  "right": {
+    "id": "ace5c1d822e686cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "939a737d12d1fab8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e6ebaf7f90ca05ee",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "fe3ac19d7166e486",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "12925e210e3a8cbf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6a39adf218223b2e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "dc0ba2ddfbc83ba0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Accessories/Accessories MOC.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Accessories MOC"
+            }
+          },
+          {
+            "id": "1c99ff1f462d7e15",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
+      },
+      {
+        "id": "1a82e6aabb1d5639",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91651f1a5e4586fb",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 283.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false
+    }
+  },
+  "active": "d7b8481c00602437",
+  "lastOpenFiles": [
+    "Thesis/9/الفصل التاسع - تصميم منظومة طاقة شمسية متصلة بالشبكة.md",
+    "Thesis/References.md",
+    "Thesis/Attachments",
+    "Accessories/Accessories MOC.md",
+    "Clippings/‎Google Gemini.md",
+    "Clippings",
+    "Graduation Project MOC.md",
+    "Attachments/Index 01.jpg",
+    "Accessories/Gemini Advices.md",
+    "Accessories/Questions.md",
+    "Accessories/The Next Steps.md",
+    "Accessories/Deadlines.md",
+    "Attachments/Screenshot 2026-04-25 154814.png",
+    "Attachments",
+    "Thesis/9/Steps.md",
+    "Thesis/4/PV-04-23.jpg",
+    "Thesis/9/منهجية التصميم.md",
+    "Thesis/9/السؤال 1.md",
+    "Thesis/Thesis MOC.md",
+    "Accessories/FAQ.md",
+    "Thesis/9/الظلال والمسافة بين الألواح/PV-09-05.png",
+    "Thesis/9/الظلال والمسافة بين الألواح/PV-09-08.png",
+    "Thesis/9/الظلال والمسافة بين الألواح/PV-09-07.png",
+    "Thesis/9/الظلال والمسافة بين الألواح/PV-09-06.png",
+    "Thesis/9/تحديد عدد الألواح بناءا على المساحة المتاحة.md",
+    "Thesis/9/حساب وتوزيع السلاسل الكهروضوئية (String Sizing and Distribution).md",
+    "Thesis/9/الظلال والمسافة بين الألواح/حساب المسافة بين الألواح لتجنب الخسائر بسبب الظلال.md",
+    "Thesis/9/حساب الحالات الحرجة للجهد.md",
+    "Thesis/9/اختيار اللوح الشمسي.md",
+    "Thesis/9/PSH vs PVOUT vs GTI (This subsection needs Organizing).md",
+    "Thesis/9/تحجيم سلسلة الألواح (String Sizing).md",
+    "Thesis/الملحقات/SUN2000-8_10_12_15_17_20KTL-M2.pdf",
+    "Thesis/9/اختيار العاكس (Inverter).md",
+    "Thesis/7/تصنيف موجات العواكس وتوافقها مع الأحمال.md",
+    "Thesis/الملحقات/الملحقات MOC.md",
+    "Thesis/الملحقات/L_Gi_LE_PM_T_PMD_059_F133_LR_5_72_HTH_590_600_M_V2_30_30_and_15_Frame_Scientist_V19_EN_pdf_26bcba7569.pdf",
+    "Thesis/الملحقات/الملحق (أ).md",
+    "Thesis/الملحقات/SUN2000-50KTL-M3.pdf",
+    "Thesis/الملحقات",
+    "Accessories/Attachments/Screenshot 2026-04-16 203504.png",
+    "Accessories/Attachments",
+    "الملحقات/L_Gi_LE_PM_T_PMD_059_F133_LR_5_72_HTH_590_600_M_V2_30_30_and_15_Frame_Scientist_V19_EN_pdf_26bcba7569.pdf",
+    "الملحقات/SUN2000-50KTL-M3.pdf",
+    "Thesis/7/PV-07-19.png",
+    "Thesis/7/PV-07-14.png"
+  ]
+}
