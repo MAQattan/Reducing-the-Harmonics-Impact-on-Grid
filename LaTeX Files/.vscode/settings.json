@@ -3,8 +3,8 @@
 
   "latex-workshop.latex.tools": [
     {
-      "name": "LuaLaTeX", // LuaLaTeX
-      "command": "lualatex", // lualatex
+      "name": "XeLaTeX", // LuaLaTeX
+      "command": "xelatex", // lualatex
       "args": [
         "-synctex=1",
         "-interaction=nonstopmode",
@@ -16,12 +16,12 @@
 
   "latex-workshop.latex.recipes": [
     {
-      "name": "LuaLaTeX", // LuaLaTeX 
-      "tools": ["LuaLaTeX"] // LuaLaTeX
+      "name": "XeLaTeX", // LuaLaTeX 
+      "tools": ["XeLaTeX"] // LuaLaTeX
     }
   ],
 
-  "latex-workshop.latex.recipe.default": "LuaLaTeX", // LuaLaTeX
+  "latex-workshop.latex.recipe.default": "XeLaTeX", // LuaLaTeX
 
   "latex-workshop.view.pdf.viewer": "tab",
 
