@@ -1,0 +1,38 @@
+% !TEX root = ../../main.tex
+
+\subsection{المرحلة الثانية: إضافة مرشح التوافقية الخامسة ($n=5$)}
+تمت إضافة أول فرع ترشيح رنيني \el{($RLC$)} مصمم لاستهداف التوافقية الخامسة \el{($250 Hz$)}، وتم ضبط معاييره كما يلي: $R=0.253 \Omega$، $L=0.0121 H$، $C=3.339 \times 10^{-5} F$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{04 - 1st filter parameters.png}
+    \caption{نافذة بارامترات مرشح التوافقية الخامسة في ماتلاب}
+\end{figure}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=1.05\linewidth]{03 - Circuit with 1st filter.png}
+        \caption{شكل الدارة بعد إضافة المرشح الأول ($n=5$)}
+    \end{figure}\newpage
+
+عند إضافة المرشح الأول ($n=5$)، نلاحظ من خلال أداة التحليل تلاشي القمم المقابلة لهذا التردد في طيف التردد:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{05 - CurrentData with 1st filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للتيار بعد اضافة المرشح الأول - تظهر \el{THD} بنسبة $14.83\%$}
+    \label{fig:05}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{06 - VoltageData with 1st filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للجهد بعد اضافة المرشح الأول - تظهر \el{THD} بنسبة $7.27\%$}
+    \label{fig:06}
+\end{figure}
+
+  \newpage
+
+\begin{itemize}
+  \item أظهرت النتائج في الصورة (الشكل \ref{fig:05}) انخفاضاً ملموساً في نسبة تشوه التيار بعد اضافة المرشح الأول، لتصل إلى \el{\boldmath $14.83\%$}.
+  \item أظهرت النتائج في الصورة (الشكل \ref{fig:06}) استقرار نسبة تشوه الجهد عند \el{\boldmath $7.27\%$} (بناءً على بارامترات ممانعة الشبكة المستخدمة في النموذج).
+\end{itemize}
+
+بعد المحاكاة، لوحظ انخفاض ملموس في نسبة التشوه التوافقي، مما يؤكد فعالية المرشح في امتصاص تيارات الرتبة الخامسة.

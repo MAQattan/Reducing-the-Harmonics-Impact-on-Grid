@@ -1,0 +1,129 @@
+\usepackage[inner=3cm, outer=2cm, top=2.5cm, bottom=2.5cm, bindingoffset=1cm]{geometry} % ضبط هامش التجليد
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+% \usepackage{luabidi} % It's necessary for RTL with "LuaLaTeX" engine only. If you use "XeLaTeX", comment this line out.
+\usepackage{bidi}
+
+\setmainlanguage[numerals=western]{arabic} % For Arabic numbers 1, 2, 3
+\setotherlanguage{english}
+
+% \newfontfamily\arabicfont[Script=Arabic, Scale=1.2]{IBM Plex Sans Arabic} % تأكد من وجود هذا الخط في نظامك %(c) Turn this on with LuaLaTeX
+\newfontfamily\arabicfont[
+    path=./Fonts/, % Assuming your fonts are in a "Fonts" subdirectory
+    Script=Arabic,
+    Scale=1.2,
+    BoldFont=IBMPlexSansArabic-Bold.ttf, 
+    AutoFakeSlant=0.15 %(c) To force italic style for Arabic text, since the font doesn't have a native italic variant.
+    ]{IBMPlexSansArabic-Regular.ttf} %(c) Turn this off with XeLaTeX.
+
+\newfontfamily\englishfont[Scale=1]{IBM Plex Sans}
+
+% ---  حزم إضافية واختصارات ---
+\usepackage{amsmath, amssymb} % للرموز الرياضية مثل THD
+\newcommand{\el}{\textenglish} % اختصار للمصطلحات الإنجليزية
+
+% --- تعريف خط الملاحظات المخصص ---
+\newfontfamily\arabicnotefont[
+    path=./Fonts/,
+    Script=Arabic, 
+    Scale=1.2,
+    AutoFakeSlant=0.25
+    ]{IBMPlexSansArabic-ExtraLight.ttf}
+    % --- إنشاء أمر مخصص لتسهيل الكتابة بالملاحظة ---
+    \newcommand{\mynote}[1]{{\arabicnotefont\itshape #1}} %(c) \itshape for italic style in notes
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Clear all default headers and footers
+
+% --- Remove horizontal rules ---
+\renewcommand{\headrulewidth}{0pt} % Remove header line
+\renewcommand{\footrulewidth}{0pt} % Ensure footer line is 0pt
+
+% --- Customize Section Marks ---
+% This makes \leftmark only contain the section title without the number
+\renewcommand{\sectionmark}[6]{\markboth{#1}{}}
+
+% --- Configure the Footer (Bottom of the page) ---
+% RO: Right side of Odd pages (Outer margin for Arabic books)
+% We place: Page Number | Section Title
+\fancyfoot[RO]{\fontsize{10}{12}\selectfont \thepage \ \ | \ \ \leftmark}
+
+% LE: Left side of Even pages (Outer margin)
+% We place: "القسم" + Section Number | Page Number
+\fancyfoot[LE]{\fontsize{10}{12}\selectfont \textarabic{القسم } \thesection \ \ | \ \ \thepage}
+% --- Alignment Fix ---
+% To ensure text stays at the margins and doesn't drift to center
+\fancyhfoffset[RO,LE]{0pt}
+
+% --- حل مشكلة خروج الكلمات إلى الهامش وتوزيع الأسطر تلقائياً ---
+\emergencystretch=2em
+
+\usepackage{pict2e} % For advanced picture drawing (used by fancybox)
+\usepackage{fancybox} % For shadow, oval, and double boxes 
+\usepackage{xcolor} % For colors
+
+\usepackage{tikz}
+\usepackage{varwidth}
+
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{figures/}}
+
+
+% 1. تعريف لون مخصص للصناديق الإرشادية لسهولة التعديل لاحقاً
+\definecolor{boxbackground}{gray}{0.93} % يعادل gray!15 تقريباً ولكن بنقاء أعلى
+\definecolor{boxborder}{gray}{0.2}      % إطار رمادي داكن مريح للعين بدلاً من الأسود الحاد
+
+% تعريف خط مخصص لعنوان الصندوق (وزن شبه عريض SemiBold)
+\newfontfamily\boxTitleFont[Script=Arabic]{IBMPlexSansArabic-SemiBold.ttf}
+% تعريف خط مخصص لمتن الصندوق (وزن عادي Regular أو Medium حسب رغبتك)
+\newfontfamily\boxBodyFont[Script=Arabic]{IBMPlexSansArabic-Light.ttf}
+
+% 2. البيئة المطورة مع لوحة تحكم علوية
+\newenvironment{arabicbox}[1]{%
+  \begin{center}
+    \begin{LTR}
+      \begin{tikzpicture}
+        \node[
+          fill=boxbackground, 
+          draw=boxborder, 
+          rounded corners=6pt, 
+          inner sep=12pt,
+          line width=0.6pt % خط إطار أنيق ومتناسق
+        ] \bgroup
+          \begin{RTL}
+            \begin{varwidth}{0.8\linewidth}
+              % 1. تطبيق خط العنوان المخصص (بدون الحاجة لـ \textbf الحادة)
+              \begin{center}\Large\boxTitleFont{#1}\\[3mm]\end{center} 
+              \centering
+              \large
+              % 2. تطبيق خط المتن المخصص للصندوق
+              \boxBodyFont 
+}{%
+              \vspace{2mm} % مسافة أمان سفلية قبل إغلاق الصندوق
+            \end{varwidth}
+          \end{RTL}
+        \egroup;
+      \end{tikzpicture}
+    \end{LTR}
+  \end{center}
+}
+
+
+\usepackage{titlesec} % حزمة التحكم في تنسيق العناوين
+
+% تخصيص تنسيق القسم (Section) ليصبح بشكل "عرض" (display)
+\titleformat{\section}[display] 
+    {\fontsize{45}{80}\selectfont\bfseries\filcenter} % حجم العنوان ثابت كما هو
+    {\vspace*{50pt}\fontsize{140}{140}\selectfont\thesection} % الحيلة هنا: أضفنا \vspace*{80pt} المحمية فوق الرقم مباشرة
+    {0pt}                                             % مسافة صفرية آمنة تمنع تسريب الكلمات
+    {} 
+    
+% --- تنسيق المسافات المحيطة بالقسم ---
+\titlespacing*{\section}
+    {0pt}    % لا يوجد إزاحة جانبية
+    {0pt}    % جعلناها صفر هنا لأننا نقلنا التحكم في المسافة العلوية للأعلى بشكل إجباري ومضمون
+    {100pt}  % المسافة الكبيرة تحت العنوان لتفصله عن النص

@@ -1,0 +1,91 @@
+% !TEX root = ../../main.tex
+
+\subsection{المرحلة الثالثة: الترشيح الكامل (إضافة الرتب $n=7$ و $n=11$)}
+وهي الخطوة المطلوبة في الوظيفة، حيث تم إدراج فرعين إضافيين على التوازي مع المرشح السابق:
+
+\begin{enumerate}
+    \item \textbf{مرشح التوافقية السابعة ($n=7$):} تم إدخال القيم المحسوبة نظرياً: $R=0.1815 \Omega$ و $L=0.00619 H$.
+    
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{08 - 2nd filter parameters.png} % Replace with actual file
+    \caption{بارامترات مرشح التوافقية السابعة في ماتلاب}
+    \label{fig:08}
+    \vspace{-10pt}
+\end{figure}
+    
+    \newpage
+    \begin{figure}[H]
+      \vspace{-30pt}
+        \centering
+        \includegraphics[angle=270,width=1\linewidth]{07 - Circuit with 2nd filter.png}
+        \caption{شكل الدارة بعد إضافة المرشح الثاني ($n=7$)}
+    \end{figure}
+    
+\newpage
+
+عند إضافة المرشح الثاني ($n=7$)، نلاحظ من خلال أداة التحليل تلاشي المزيد من القمم، نتيجة ترشيح التوافقيات المقابلة لهذا التردد، مما أدى إلى تحسين إضافي في جودة القدرة:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{09 - CurrentData with 2nd filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للتيار بعد اضافة المرشح الثاني - تظهر \el{THD} بنسبة $11.94\%$}
+    \label{fig:09}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{10 - VoltageData with 2nd filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للجهد بعد اضافة المرشح الثاني - تظهر \el{THD} بنسبة $6.35\%$}
+    \label{fig:10}
+\end{figure}
+
+\newpage
+
+\begin{itemize}
+  \item أظهرت النتائج في الصورة (الشكل \ref{fig:09}) المزيد من التحسن في نسبة تشوه التيار بعد اضافة المرشح الثاني، لتصل إلى \el{\boldmath $11.94\%$}.
+  \item أظهرت النتائج في الصورة (الشكل \ref{fig:10}) تحسن آخر لا بأس به في نسبة تشوه الجهد واستقراره عند \el{\boldmath $6.35\%$}.
+\end{itemize}
+
+\vspace{20pt}
+
+    \item \textbf{مرشح التوافقية الحادية عشرة ($n=11$):}\\[5pt] تم إدخال القيم: $R=0.115 \Omega$ و $L=0.0025 H$.
+    
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{12 - 3rd filter parameters.png} % Replace with actual file
+    \caption{بارامترات مرشح التوافقية الحادية عشرة في ماتلاب}
+    \label{fig:12}
+\end{figure}
+
+\newpage
+
+    \begin{figure}[H]
+      \vspace{-30pt}
+        \centering
+        \includegraphics[angle = 90, width=0.95\linewidth]{11 - Circuit with 3rd filter.png}
+        \caption{شكل الدارة النهائي مع كافة المرشحات}
+    \end{figure}
+\end{enumerate}
+
+\newpage
+بإضافة المرشح الأخير المخصص للتوافقية الحادية عشرة ($550 Hz$)، نصل إلى الحالة الشبه مثالية المطلوبة في الوظيفة:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{13 - CurrentData with 3rd filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للتيار بعد اضافة المرشح الثالث - تظهر \el{THD} بنسبة $9.93\%$}
+    \label{fig:13}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{14 - VoltageData with 3rd filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للجهد بعد اضافة المرشح الثالث - تظهر \el{THD} بنسبة $4.76\%$}
+    \label{fig:14}
+\end{figure}
+
+\newpage
+
+\begin{itemize}
+    \item \textbf{تحليل التيار:} تظهر الصورة (الشكل \ref{fig:13}) استمرار انخفاض نسبة التشوه الكلي للتيار واختفاء معظم المركبات التوافقية الضارة.
+    \item \textbf{تحليل الجهد:} تظهر الصورة (الشكل \ref{fig:14}) انخفاض نسبة \el{$THD$} للجهد إلى أدنى مستوياتها، مما يجعل موجة الجهد جيبية ونقية بشكل كبير.
+\end{itemize}

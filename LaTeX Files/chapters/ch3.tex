@@ -1,0 +1,22 @@
+% !TEX root = ../main.tex
+
+\section{الحسابات النظرية للمرشحات} \label{sec:sec3}
+  \thispagestyle{empty} % This removes header/footer from the current page only
+  {\fontsize{16}{27}\selectfont
+  لتحسين جودة القدرة وتخفيض نسبة التشوه التوافقي ($THD$)، يتم تصميم مرشحات تردد رنيني \el{\textbf{(Tuned Filters)}} تسلسلية من النوع ($RLC$). الهدف من هذه المرشحات هو توفير مسار منخفض الممانعة لتيارات التوافقيات عند ترددات الرنين الخاصة بها، مما يمنعها من الانتشار في الشبكة.
+  \par}
+ \vspace{5pt} 
+{\sloppy
+\noindent تعتمد الحسابات على البارامترات الأساسية التالية المستخرجة من "الجلسة الثالثة":}
+\begin{itemize}
+    \item \textbf{التردد الأساسي ($f$):} $50 Hz$.
+    \item \textbf{سعة المكثف ($C$):} تم حسابها سابقاً لتصحيح عامل الاستطاعة وهي ثابتة لكافة المرشحات: $C = 3.339 \times 10^{-5} F$.
+    \item \textbf{عامل الجودة ($Q$):} تم اختياره بقيمة $75$ لتحقيق دقة ترشيح مناسبة وتوازن بين عرض الحزمة وممانعة الرنين.
+\end{itemize}
+
+
+
+\input{sections/ch3_sections/sec3_1.tex}
+\input{sections/ch3_sections/sec3_2.tex}
+\input{sections/ch3_sections/sec3_3.tex}
+\input{sections/ch3_sections/sec3_4.tex}
