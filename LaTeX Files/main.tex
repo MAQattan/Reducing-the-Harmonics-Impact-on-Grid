@@ -1,87 +1,40 @@
 \documentclass[12pt, a4paper, twoside]{article}
 % أمر (twoside) تفعيل الطباعة على الوجهين لتبادل الهوامش
 
-% الاستدعاء الذكي لملف الديباجة المستقل
 \input{preamble.tex}
 
+% الاستدعاء الذكي لملف الديباجة المستقل
 % \includeonly{chapters/ch1} % لتجريب فصلين فقط أثناء التطوير
 
 
 
 \begin{document}
 
-\begin{titlepage}
-  \thispagestyle{empty}
-
-  % الشعار - أعلى يسار الصفحة
-  \begin{picture}(0,0)
-  \put(-15,-90){\includegraphics[width=3.2cm]{logo.png}}
-  \end{picture}
-  \begin{picture}(0,0)
-  \put(300,-90){\includegraphics[width=3.45cm]{logo2.jpg}}
-  \end{picture}
-
-  % اسم الجامعة - أعلى يمين الصفحة
-  \begin{center}
-    \vspace{-5pt}
-    \fontsize{9}{20}\selectfont
-    \textbf{جامعة حلب}\\
-    كلية الهندسة الكهربائية والإلكترونية\\
-    قسم نظم القدرة الكهربائية
-  \par\end{center}
-
-  \vspace{4cm}
-
-  \begin{center}
-  {\fontsize{30}{50}\selectfont \bfseries تحسين جودة القدرة الكهربائية لشبكة كهربائية تغذي حمل غير خطي
-  \par}
-
-    \vspace{4cm}
-  {\large إعداد الطالب: محمد علي قطّان \el{207047}}\\[0.5cm]
-  {\large إشراف المهندسة: بيان عقاد}\\[1cm]
-    \vspace{2cm} 
-  {\small \el{14} أيار/مايو \el{2026}\\[5pt]
-  \el{26} ذو القعدة \el{1447}}
-  \end{center}
-
-  \vfill
-  \end{titlepage}
+\input{title_page.tex}
+\clearpage
 
 \newpage
 \thispagestyle{empty}
 \mbox{}
 \newpage
 
-% الفهارس التلقائية
-\clearpage
-\begin{center}
-    {\fontsize{26}{32}\selectfont\bfseries الفهرس}
-\end{center}
-\vspace{40pt}
+\pagenumbering{roman} % (السحر الأول) بدء الترقيم باللاتيني الصغير (i, ii, iii...) وتصفير العداد تلقائياً
+\pagestyle{introstyle} % تطبيق نمط المقدمة (بدون رؤوس، أرقام في الوسط بالأسفل)
 
-% الربط الديناميكي الذكي للأرقام
-\noindent{\large\bfseries القسم الأول: مقدمة}\dotfill\ {\large\bfseries \pageref{sec:sec1}} \\[0.7cm]
+\input{index_page.tex}
 
-\noindent{\large\bfseries القسم الثاني: توصيف المنظومة والنمذجة}\dotfill\ {\large\bfseries \pageref{sec:sec2}} \\[0.7cm]
-
-\noindent{\large\bfseries القسم الثالث: الحسابات النظرية للمرشحات}\dotfill\ {\large\bfseries \pageref{sec:sec3}} \\[0.7cm]
-
-\noindent{\large\bfseries القسم الرابع: التطبيق العملي على \el{MATLAB}}\dotfill\ {\large\bfseries \pageref{sec:sec4}} \\[0.7cm]
-
-\noindent{\large\bfseries القسم الخامس: الاستنتاجات}\dotfill\ {\large\bfseries \pageref{sec:sec5}} \\[0.7cm]
-\clearpage
-
-\newpage
-
+% \tableofcontents
 % \listoffigures
 % \listoftables
-
 % \newpage
+%(c) I didn't use those because I wanted to customize the index page manually for better control over formatting and content. and these commands have some problems with Arabic text and formatting, so I opted for a custom solution to ensure everything looks perfect.
+\pagenumbering{arabic} % (السحر الثاني) العودة للترقيم النظامي (1, 2, 3...) وتصفير العداد لتبدأ هذه 
+\pagestyle{mainstyle}
 
-\include{chapters/ch1}
-\include{chapters/ch2}
-\include{chapters/ch3}
-\include{chapters/ch4}
-\include{chapters/ch5}
+\include{part1/chapters/ch1}
+\include{part1/chapters/ch2}
+\include{part1/chapters/ch3}
+\include{part1/chapters/ch4}
+\include{part1/chapters/ch5}
 
 \end{document}
