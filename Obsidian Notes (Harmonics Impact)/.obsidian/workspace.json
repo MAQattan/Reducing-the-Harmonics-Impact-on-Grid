@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -281,15 +281,15 @@
       "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "276dc420f796fde1",
+  "active": "aa5fcfcc737aafd8",
   "lastOpenFiles": [
     "LaTeX Tips/Problems/حل مشكلة خروج الكلمات إلى الهامش.md",
+    "LaTeX Tips/صناديق/أكثر الطرق تطورا لانشاء صندوق.md",
     "The Projects Parts/Part 4.md",
     "LaTeX Tips/التباعد بين السطور.md",
     "Steps Map.md",
     "The Projects Parts/Part 3.md",
     "The Projects Parts/Part 2.md",
-    "LaTeX Tips/صناديق/أكثر الطرق تطورا لانشاء صندوق.md",
     "LaTeX Tips/صناديق/إنشاء صناديق بسيطة & MOC.md",
     "LaTeX Tips/صناديق/استخدام حزمة fancybox (للمظهر الكلاسيكي).md",
     "LaTeX Tips/صناديق/الصندوق الخفي باستخدام minipage فقط.md",
