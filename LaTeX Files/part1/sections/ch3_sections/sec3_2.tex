@@ -1,14 +1,32 @@
 % !TEX root = ../../../main.tex
 
-\subsection{حسابات مرشح التوافقية السابعة ($n=7$)}
-\begin{itemize}
-    \item \textbf{تردد الرنين:} $f_{r7} = 7 \times 50 = 350 Hz$.
-    \item \textbf{حساب الحث ($L_7$):}
-    \begin{equation*}
-        L_7 = \frac{1}{(2 \pi \times 350)^2 \times 3.339 \times 10^{-5}} \approx \mathbf{0.00619 H} \text{ أو } (6.19 mH)
-    \end{equation*}
-    \item \textbf{حساب المقاومة ($r_7$):}
-    \begin{equation*}
-        r_7 = \frac{\sqrt{0.00619 / 3.339 \times 10^{-5}}}{75} \approx \mathbf{0.1815 \Omega}
-    \end{equation*}
-\end{itemize}
+\subsection{المرحلة الأولى: النظام بدون ترشيح}
+في هذه المرحلة، تم تشغيل الدارة في حالتها الأصلية حيث يغذي المنبع حمل القنطرة الديودية مباشرة عبر ممانعات الشبكة والكبل.
+
+\begin{figure}[H]
+  \vspace{15pt}
+    \centering
+    \includegraphics[width=1.05\linewidth]{00 - Circuit without Filters.png}
+    \caption{المخطط الكامل للدارة بدون مرشحات}
+    \label{fig:baseline_circuit}
+\end{figure}
+
+أظهرت نتائج التحليل في هذه المرحلة تشوهاً كبيراً جداً في موجة التيار، حيث بلغت نسبة \el{\boldmath $THD_I = 24.76\%$}, بينما كانت موجة الجهد أقل تأثراً بنسبة \el{\boldmath $THD_V = 9.55\%$} نتيجة وجود ممانعات الشبكة التي تعمل كمخمدات طبيعية.
+
+\newpage
+\begin{figure}[H]
+  \vspace{-10pt}
+  \centering
+  \includegraphics[width=1.05\textwidth]{01 - CurrentData without filters.png}
+    \caption{\small نتائج تحليل \el{FFT} للتيار قبل الترشيح - تظهر \el{THD} بنسبة $24.76\%$}
+    \label{fig:01}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.05\textwidth]{02 - VoltageData without filters.png}
+    \caption{\small نتائج تحليل \el{FFT} للجهد قبل الترشيح - تظهر \el{THD} بنسبة $9.55\%$}
+    \label{fig:02}
+\end{figure}
+
+\newpage
+

@@ -1,13 +1,12 @@
 % !TEX root = ../../main.tex
+\section{مناقشة النتائج} \label{part1:sec4}
+% \thispagestyle{empty}
 
-\section{التطبيق العملي\\ على \el{MATLAB}} \label{part1:sec4}
-  % \thispagestyle{empty} % This removes header/footer from the current page only
-  {\fontsize{16}{28}\selectfont
-  يتناول هذا القسم مراحل تنفيذ النموذج وتطويره تدريجياً، مع توضيح الإعدادات البرمجية اللازمة لضمان الحصول على تحليل دقيق للتوافقيات باستخدام أداة \el{\textbf{FFT Analysis}} الملحقة ببلوك \el{\textbf{powergui}}.
-  \par}
+من خلال هذه الدراسة والمحاكاة العملية باستخدام برنامج \el{\textbf{MATLAB R2023b}}، خرجنا بالنتائج التالية:
 
-  
-\input{part1/sections/ch4_sections/sec4_1.tex}
-\input{part1/sections/ch4_sections/sec4_2.tex}
-\input{part1/sections/ch4_sections/sec4_3.tex}
-\input{part1/sections/ch4_sections/sec4_4.tex}
+\begin{enumerate}
+    \item أثبتت مرشحات التردد الرنيني \el{(\textbf{Tuned Filters})} كفاءة عالية في امتصاص تيارات التوافقيات عند ترددات الرنين المحددة، مما أدى لخفض نسبة \el{$THD$} بشكل تدريجي مع كل إضافة.
+    \item ساهمت المرشحات في تحسين معامل الاستطاعة وتقريب شكل موجة التيار والجهد من الشكل الجيبي النقي، مما يقلل من الفواقد والحرارة في عناصر الشبكة.
+    \item بفضل إضافة مرشحات الرتب 7 و 11، تمكنا من الحفاظ على جودة الجهد ضمن الحدود العالمية المسموح بها (غالباً أقل من 3\% أو 5\% حسب المواصفة).
+    \item أكدت الدراسة أن للحصول على نتائج صحيحة ومطابقة للواقع الفيزيائي يجب أن ضبط إعدادات المحاكاة بشكل دقيق و إدخال بارامترات العناصر بعناية شديدة، حيث أن أي خطأ في القيم أو الإعدادات قد يؤدي لنتائج غير دقيقة أو غير منطقية.
+\end{enumerate}

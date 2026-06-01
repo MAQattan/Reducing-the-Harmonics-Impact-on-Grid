@@ -10,3 +10,4 @@
 - استخدم الأمر البرمجي التالي في نافذة الأوامر (Command Window): 
 `print('-sReducing_the_Harmonics_Impact', '-dpdf', 'CircuitImage.pdf')`
 - هذا سيخرج لك الدارة كملف PDF مستقل بدقة متناهية، ويمكنك بعدها إدراجها في ملفك الرئيسي.
+- الاسم الحالي بالأمر هو `Reducing_the_Harmonics_Impact` وهاد هو اسم ملف .slx الذي تريد تصديره

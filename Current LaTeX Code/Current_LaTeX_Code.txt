@@ -1,0 +1,417 @@
+\documentclass[12pt, a4paper, twoside]{article}
+% أمر (twoside) تفعيل الطباعة على الوجهين لتبادل الهوامش
+
+\input{preamble.tex}
+
+% الاستدعاء الذكي لملف الديباجة المستقل
+% \includeonly{part1/chapters/ch1} % لتجريب فصلين فقط أثناء التطوير
+
+
+
+\begin{document}
+
+
+\begin{titlepage}
+\thispagestyle{empty}
+
+% الشعار - أعلى يسار الصفحة
+\begin{picture}(0,0)
+\put(-15,-90){\includegraphics[width=3.2cm]{logo.png}}
+\end{picture}
+\begin{picture}(0,0)
+\put(300,-90){\includegraphics[width=3.45cm]{logo2.jpg}}
+\end{picture}
+
+% اسم الجامعة - أعلى يمين الصفحة
+\begin{center}
+\vspace{-5pt}
+\fontsize{9}{20}\selectfont
+\textbf{جامعة حلب}\\
+كلية الهندسة الكهربائية والإلكترونية\\
+قسم نظم القدرة الكهربائية
+\par\end{center}
+
+\vspace{4cm}
+
+\begin{center}
+{\fontsize{30}{50}\selectfont \bfseries تحسين جودة القدرة الكهربائية لشبكة كهربائية تغذي حمل غير خطي
+\par}
+
+\vspace{4cm}
+{\large إعداد الطالب: محمد علي قطّان \el{207047}}\\[0.5cm]
+{\large إشراف المهندسة: بيان عقاد}\\[1cm]
+\vspace{2cm} 
+{\small \el{14} أيار/مايو \el{2026}\\[5pt]
+\el{26} ذو القعدة \el{1447}}
+\end{center}
+
+\vfill
+
+\end{titlepage}
+\clearpage
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+\pagenumbering{roman} % (السحر الأول) بدء الترقيم باللاتيني الصغير (i, ii, iii...) وتصفير العداد تلقائياً
+\pagestyle{introstyle} % تطبيق نمط المقدمة (بدون رؤوس، أرقام في الوسط بالأسفل)
+
+
+% الفهارس التلقائية
+\clearpage
+\begin{center}
+    {\fontsize{26}{32}\selectfont\bfseries الفهرس}
+\end{center}
+\vspace{40pt}
+% الربط الديناميكي الذكي للأرقام
+% \noindent{\large\bfseries القسم الأول: مقدمة}\dotfill\ {\large\bfseries \pageref{part1:sec1}} \\[0.7cm]
+
+\noindent{\LARGE\bfseries الوظيفة 1 : مرشح التردد الرنيني}\dotfill\ {\large\bfseries \pageref{part1}} \\[0.7cm]
+
+{\large\bfseries القسم الأول: توصيف المنظومة والنمذجة}\dotfill\ {\large\bfseries \pageref{part1:sec2}} \\[0.7cm]
+
+{\large\bfseries القسم الثاني: الحسابات النظرية للمرشحات}\dotfill\ {\large\bfseries \pageref{part1:sec3}} \\[0.7cm]
+
+{\large\bfseries القسم الثالث: التطبيق العملي على \el{MATLAB}}\dotfill\ {\large\bfseries \pageref{part1:sec4}} \\[0.7cm]
+
+{\large\bfseries القسم الرابع: مناقشة النتائج}\dotfill\ {\large\bfseries \pageref{part1:sec5}} \\[1.4cm]
+
+\noindent{\LARGE\bfseries الوظيفة 2 : مرشح التمرير المنخفض}\dotfill\ {\large\bfseries \pageref{part2}} \\[0.7cm]
+\clearpage
+
+
+\pagenumbering{arabic} % (السحر الثاني) العودة للترقيم النظامي (1, 2, 3...) وتصفير العداد لتبدأ هذه 
+\pagestyle{mainstyle}
+{
+\clearpage 
+\thispagestyle{empty}
+{\vspace*{70pt}\fontsize{55}{80}\selectfont
+\textbf{الوظيفة 1} \label{part1}
+}\\[30pt]
+{\fontsize{30}{45}\selectfont
+تصميم مرشحات التردد الرنيني \el{(Tuned Filters)} للتوافقية السابعة والحادية عشرة في نظام قدرة ثلاثي الطور مع حمولة غير خطية للتخلص من التوافقيات وضمان جودة الطاقة ضمن الحدود المسموح بها.
+\par}
+}
+\section{توصيف المنظومة والنمذجة} \label{part1:sec1}
+    % \thispagestyle{empty} % This removes header/footer from the current page only
+    {\fontsize{16}{27}\selectfont
+    تتمثل الخطوة الأساسية في هذه الدراسة في بناء نموذج دقيق للنظام الكهربائي باستخدام مكتبة \el{Specialized Power Systems} في بيئة \el{MATLAB R2023b}. تم تصميم الدارة لتمثيل شبكة تغذية تغذي حملاً غير خطي، مع الأخذ بعين الاعتبار الممانعات المختلفة التي تؤثر على جودة القدرة.
+    \par}
+
+\subsection{مكونات الشبكة \el{(Network Components)}}
+يتألف النموذج من العناصر التالية، والتي تم ضبط بارامتراتها بناءً على الحسابات الهندسية الموضحة في الجلسة الثانية:
+\begin{enumerate}
+  \item \textbf{منبع الجهد \el{(Three-Phase Source)}}:
+  يمثل محطة التحويل بجهد اسمي قدره $400 V$ (بين الأطوار) وتردد $50 Hz$. تم ضبط قيمة الذروة في الموديل لتكون $220\sqrt{2} V$.\\[-10pt]
+  
+\begin{arabicbox}{تذكر}
+  يجب ضبط الإزاحة الطورية بين المنابع الثلاثة بزاوية $120^\circ$ لتكون ($0^\circ, -120^\circ, 120^\circ$) للأطوار \el{A} و \el{B} و \el{C} على التوالي، لتجنب ظهور تيارات تسلسل صفري غير مرغوبة.
+\end{arabicbox}
+ 
+
+  \item \textbf{ممانعة القصر للشبكة ($Z_{sc}$)}: تم تمثيلها باستخدام بلوك \el{Series RLC Branch} بقيم محسوبة لتعكس استطاعة قصر قدرها $500 MVA$، حيث بلغت المقاومة $R_{sc} = 3.184 \times 10^{-3} \Omega$ والحث $L_{sc} = 1 mH$ لضمان ظهور تشوه الجهد بوضوح عند التحليل.
+  \item \textbf{ممانعة المحولة ($Z_{T}$)}:
+  تم تمثيل المحولة ($1000 KVA$) بممانعة تسلسلية منسوبة للطرف الثانوي قيمتها $R_T = 2.08 \times 10^{-3} \Omega$ و $L_T = 3.05 \times 10^{-5} H$.
+  \item \textbf{ممانعة الكبل \el{(Cable Impedance)}}: كبل نحاسي بطول $230 m$ ومقطع $16 mm^2$، بممانعة قدرها $R = 0.256 \Omega$ و $L = 6.05 \times 10^{-5} H$.
+  \item \textbf{الحمل غير الخطي \el{(Non-linear Load)}}:
+  يتكون من جسر تقويم ديودي سداسي النبضات \el{(Universal Bridge)} يغذي حملاً مستمراً \el{(RL Load)} باستطاعة $25 KW$، حيث تبلغ مقاومة الحمل $10.6 \Omega$ وتحريضه $1 mH$ .
+\end{enumerate}
+
+\subsection{إعدادات المحاكاة \el{(Simulation Settings)}}
+
+للحصول على نتائج دقيقة في تحليل التوافقيات \el{($FFT Analysis$)}، تم ضبط بلوك \el{powergui} وفق المعايير التالية:
+\begin{itemize}
+    \item تم اختيار \textbf{\el{Simulation type}} على الوضع \el{Discrete} (متقطع) بدلاً من الوضع المستمر، وذلك لأن النظام يحتوي على عناصر إلكترونيات قدرة \el{(Diodes)} تتطلب تمثيلاً دقيقاً لعمليات التبديل.
+    \item تم تحديد زمن العينة  \textbf{\el{Sample time}} بقيمة دقيقة جداً وهي $1 \times 10^{-6} s$. هذا الزمن الصغير ضروري جداً لالتقاط الرتب التوافقية العالية بدقة ومنع حدوث أخطاء "الطي" \el{(Aliasing)} في الطيف الترددي.
+\end{itemize}
+
+\subsection{إعدادات أداة التحليل \el{(FFT Tool Configuration)}}
+
+قبل البدء بعملية الترشيح، تم ضبط السكوبات الخاصة بالجهد والتيار لتسجيل البيانات في مساحة العمل \el{(Workspace)} بتنسيق \el{Structure with time}. في أداة \el{FFT}، تم ضبط التردد الأساسي على $50 Hz$، وتحليل الإشارة بدءاً من الزمن $0.01 s$ لضمان استقرار الدارة.
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\linewidth]{01 - CurrentData without filters - copy.png}
+    \includegraphics[width=0.45\linewidth]{02 - VoltageData without filters - copy.png}
+    \caption{إعدادات أداة التحليل \el{(FFT)} للتيار (يمين) وللجهد (يسار)}
+    \label{fig:fft_baseline}
+\end{figure}
+
+
+
+\section{الحسابات النظرية\\ للمرشحات} \label{part1:sec2}
+%   \thispagestyle{empty} % This removes header/footer from the current page only
+  {\fontsize{16}{27}\selectfont
+  لتحسين جودة القدرة وتخفيض نسبة التشوه التوافقي ($THD$)، يتم تصميم مرشحات تردد رنيني \el{\textbf{(Tuned Filters)}} تسلسلية من النوع ($RLC$). الهدف من هذه المرشحات هو توفير مسار منخفض الممانعة لتيارات التوافقيات عند ترددات الرنين الخاصة بها، مما يمنعها من الانتشار في الشبكة.
+  \par}
+ \vspace{5pt} 
+{\sloppy
+\noindent تعتمد الحسابات على البارامترات الأساسية التالية المستخرجة من "الجلسة الثالثة":}
+\begin{itemize}
+    \item \textbf{التردد الأساسي ($f$):} $50 Hz$.
+    \item \textbf{سعة المكثف ($C$):} تم حسابها سابقاً لتصحيح عامل الاستطاعة وهي ثابتة لكافة المرشحات: $C = 3.339 \times 10^{-5} F$.
+    \item \textbf{عامل الجودة ($Q$):} تم اختياره بقيمة $75$ لتحقيق دقة ترشيح مناسبة وتوازن بين عرض الحزمة وممانعة الرنين.
+\end{itemize}
+
+\subsection{قوانين التصميم المستخدمة}
+تعتمد عملية الحساب على القوانين الفيزيائية التالية:
+\begin{enumerate}
+    \item \textbf{تردد الرنين ($f_r$):} $f_r = n \times f$ (حيث $n$ هي رتبة التوافقية).
+    \item \textbf{قانون الحث ($L$):} يُشتق من علاقة الرنين الأساسية $f_r = \frac{1}{2 \pi \sqrt{LC}}$ ليصبح:
+    \begin{equation*}
+        L_n = \frac{1}{(2 \pi f_r)^2 \times C}
+    \end{equation*}
+    \item \textbf{قانون المقاومة ($r$):} يُشتق من علاقة عامل الجودة $Q = \frac{X_0}{r}$ حيث $X_0 = \sqrt{\frac{L}{C}}$، ليصبح:
+    \begin{equation*}
+        r_n = \frac{\sqrt{L_n / C}}{Q}
+    \end{equation*}
+\end{enumerate}
+
+\subsection{حسابات مرشح التوافقية السابعة ($n=7$)}
+\begin{itemize}
+    \item \textbf{تردد الرنين:} $f_{r7} = 7 \times 50 = 350 Hz$.
+    \item \textbf{حساب الحث ($L_7$):}
+    \begin{equation*}
+        L_7 = \frac{1}{(2 \pi \times 350)^2 \times 3.339 \times 10^{-5}} \approx \mathbf{0.00619 H} \text{ أو } (6.19 mH)
+    \end{equation*}
+    \item \textbf{حساب المقاومة ($r_7$):}
+    \begin{equation*}
+        r_7 = \frac{\sqrt{0.00619 / 3.339 \times 10^{-5}}}{75} \approx \mathbf{0.1815 \Omega}
+    \end{equation*}
+\end{itemize}
+
+\subsection{حسابات مرشح التوافقية الحادية عشرة ($n=11$)}
+\begin{itemize}
+    \item \textbf{تردد الرنين:} $f_{r11} = 11 \times 50 = 550 Hz$.
+    \item \textbf{حساب الحث ($L_{11}$):}
+    \begin{equation*}
+        L_{11} = \frac{1}{(2 \pi \times 550)^2 \times 3.339 \times 10^{-5}} \approx \mathbf{0.0025 H} \text{ أو } (2.5 mH)
+    \end{equation*}
+    \item \textbf{حساب المقاومة ($r_{11}$):}
+    \begin{equation*}
+        r_{11} = \frac{\sqrt{0.0025 / 3.339 \times 10^{-5}}}{75} \approx \mathbf{0.115 \Omega}
+    \end{equation*}
+\end{itemize}
+
+\subsection{ملخص قيم عناصر المرشحات}
+الجدول التالي يلخص القيم التي سيتم إدخالها في نموذج \el{\textbf{Simulink}} لإتمام عملية الترشيح:
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.5} % Increase row height for clarity [1]
+\begin{tabular}{|r||c|c|c|c|}
+\hline
+\textbf{رتبة التوافقية ($n$)} & \textbf{التردد ($Hz$)} & \textbf{الحث ($L$) \el{[H]}} & \textbf{المقاومة ($R$) \el{[$\Omega$]}} & \textbf{السعة ($C$) \el{[F]}} \\ \hline
+\textbf{التوافقية 5} & $250$ & $0.0121$ & $0.253$ & $3.339 \times 10^{-5}$ \\ \hline
+\textbf{التوافقية 7} & $350$ & $0.00619$ & $0.1815$ & $3.339 \times 10^{-5}$ \\ \hline
+\textbf{التوافقية 11} & $550$ & $0.0025$ & $0.115$ & $3.339 \times 10^{-5}$ \\ \hline
+\end{tabular}
+\caption{ملخص قيم عناصر مرشحات القدرة في نموذج المحاكاة}
+\label{tab:filters_summary}
+\end{table}
+
+
+\section{التطبيق العملي\\ على \el{MATLAB}} \label{part1:sec3}
+  % \thispagestyle{empty} % This removes header/footer from the current page only
+  {\fontsize{16}{28}\selectfont
+  يتناول هذا القسم مراحل تنفيذ النموذج وتطويره تدريجياً، مع توضيح الإعدادات البرمجية اللازمة لضمان الحصول على تحليل دقيق للتوافقيات باستخدام أداة \el{\textbf{FFT Analysis}} الملحقة ببلوك \el{\textbf{powergui}}.
+  \par}
+
+\subsection{إعداد أدوات القياس}
+لتمكين البرنامج من تحليل الإشارات، تم إجراء تعديلات تقنية هامة على كتل السكوب \el{(Scopes)} الخاصة بالجهد والتيار قبل المقوم:
+\begin{itemize}
+    \item \textbf{تسجيل البيانات \el{(Data Logging)}:} تم تفعيل خيار \el{\textbf{Log data to workspace}} لضمان تصدير قيم الجهد والتيار إلى مساحة عمل ماتلاب.
+    \item \textbf{تنسيق البيانات \el{(Save Format)}:} تم ضبط تنسيق الحفظ على \el{\textbf{Structure with time}}، وهو التنسيق الوحيد الذي تتعرف عليه أداة تحليل \el{FFT} في النسخ الحديثة.
+    \item \textbf{إعدادات الموديل:} تم إلغاء تحديد خيار \el{\textbf{Single simulation output}} من إعدادات الموديل \el{(Model Settings)} لضمان ظهور المتغيرات بشكل مستقل في قائمة \el{FFT Analyzer}.
+    \item \textbf{اسم المتحولة \el{(Variable Name)}:} تم تسمية المتحولة الخاصة بالتيار \el{"CurrentData"} وبالجهد \el{"VoltageData"} لتسهيل التعرف عليها أثناء التحليل.
+\end{itemize}
+
+\subsection{المرحلة الأولى: النظام بدون ترشيح}
+في هذه المرحلة، تم تشغيل الدارة في حالتها الأصلية حيث يغذي المنبع حمل القنطرة الديودية مباشرة عبر ممانعات الشبكة والكبل.
+
+\begin{figure}[H]
+  \vspace{15pt}
+    \centering
+    \includegraphics[width=1.05\linewidth]{00 - Circuit without Filters.png}
+    \caption{المخطط الكامل للدارة بدون مرشحات}
+    \label{fig:baseline_circuit}
+\end{figure}
+
+أظهرت نتائج التحليل في هذه المرحلة تشوهاً كبيراً جداً في موجة التيار، حيث بلغت نسبة \el{\boldmath $THD_I = 24.76\%$}, بينما كانت موجة الجهد أقل تأثراً بنسبة \el{\boldmath $THD_V = 9.55\%$} نتيجة وجود ممانعات الشبكة التي تعمل كمخمدات طبيعية.
+
+\newpage
+\begin{figure}[H]
+  \vspace{-10pt}
+  \centering
+  \includegraphics[width=1.05\textwidth]{01 - CurrentData without filters.png}
+    \caption{\small نتائج تحليل \el{FFT} للتيار قبل الترشيح - تظهر \el{THD} بنسبة $24.76\%$}
+    \label{fig:01}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.05\textwidth]{02 - VoltageData without filters.png}
+    \caption{\small نتائج تحليل \el{FFT} للجهد قبل الترشيح - تظهر \el{THD} بنسبة $9.55\%$}
+    \label{fig:02}
+\end{figure}
+
+\newpage
+
+\subsection{المرحلة الثانية: إضافة مرشح التوافقية الخامسة ($n=5$)}
+تمت إضافة أول فرع ترشيح رنيني \el{($RLC$)} مصمم لاستهداف التوافقية الخامسة \el{($250 Hz$)}، وتم ضبط معاييره كما يلي: $R=0.253 \Omega$، $L=0.0121 H$، $C=3.339 \times 10^{-5} F$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{04 - 1st filter parameters.png}
+    \caption{نافذة بارامترات مرشح التوافقية الخامسة في ماتلاب}
+\end{figure}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=1.05\linewidth]{03 - Circuit with 1st filter.png}
+        \caption{شكل الدارة بعد إضافة المرشح الأول ($n=5$)}
+    \end{figure}\newpage
+
+عند إضافة المرشح الأول ($n=5$)، نلاحظ من خلال أداة التحليل تلاشي القمم المقابلة لهذا التردد في طيف التردد:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{05 - CurrentData with 1st filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للتيار بعد اضافة المرشح الأول - تظهر \el{THD} بنسبة $14.83\%$}
+    \label{fig:05}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{06 - VoltageData with 1st filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للجهد بعد اضافة المرشح الأول - تظهر \el{THD} بنسبة $7.27\%$}
+    \label{fig:06}
+\end{figure}
+
+  \newpage
+
+\begin{itemize}
+  \item أظهرت النتائج في الصورة (الشكل \ref{fig:05}) انخفاضاً ملموساً في نسبة تشوه التيار بعد اضافة المرشح الأول، لتصل إلى \el{\boldmath $14.83\%$}.
+  \item أظهرت النتائج في الصورة (الشكل \ref{fig:06}) استقرار نسبة تشوه الجهد عند \el{\boldmath $7.27\%$} (بناءً على بارامترات ممانعة الشبكة المستخدمة في النموذج).
+\end{itemize}
+
+بعد المحاكاة، لوحظ انخفاض ملموس في نسبة التشوه التوافقي، مما يؤكد فعالية المرشح في امتصاص تيارات الرتبة الخامسة.
+
+\subsection{المرحلة الثالثة: الترشيح الكامل (إضافة الرتب $n=7$ و $n=11$)}
+وهي الخطوة المطلوبة في الوظيفة، حيث تم إدراج فرعين إضافيين على التوازي مع المرشح السابق:
+
+\begin{enumerate}
+    \item \textbf{مرشح التوافقية السابعة ($n=7$):} تم إدخال القيم المحسوبة نظرياً: $R=0.1815 \Omega$ و $L=0.00619 H$.
+    
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{08 - 2nd filter parameters.png} % Replace with actual file
+    \caption{بارامترات مرشح التوافقية السابعة في ماتلاب}
+    \label{fig:08}
+    \vspace{-10pt}
+\end{figure}
+    
+    \newpage
+    \begin{figure}[H]
+      \vspace{-30pt}
+        \centering
+        \includegraphics[angle=270,width=1\linewidth]{07 - Circuit with 2nd filter.png}
+        \caption{شكل الدارة بعد إضافة المرشح الثاني ($n=7$)}
+    \end{figure}
+    
+\newpage
+
+عند إضافة المرشح الثاني ($n=7$)، نلاحظ من خلال أداة التحليل تلاشي المزيد من القمم، نتيجة ترشيح التوافقيات المقابلة لهذا التردد، مما أدى إلى تحسين إضافي في جودة القدرة:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{09 - CurrentData with 2nd filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للتيار بعد اضافة المرشح الثاني - تظهر \el{THD} بنسبة $11.94\%$}
+    \label{fig:09}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{10 - VoltageData with 2nd filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للجهد بعد اضافة المرشح الثاني - تظهر \el{THD} بنسبة $6.35\%$}
+    \label{fig:10}
+\end{figure}
+
+\newpage
+
+\begin{itemize}
+  \item أظهرت النتائج في الصورة (الشكل \ref{fig:09}) المزيد من التحسن في نسبة تشوه التيار بعد اضافة المرشح الثاني، لتصل إلى \el{\boldmath $11.94\%$}.
+  \item أظهرت النتائج في الصورة (الشكل \ref{fig:10}) تحسن آخر لا بأس به في نسبة تشوه الجهد واستقراره عند \el{\boldmath $6.35\%$}.
+\end{itemize}
+
+\vspace{20pt}
+
+    \item \textbf{مرشح التوافقية الحادية عشرة ($n=11$):}\\[5pt] تم إدخال القيم: $R=0.115 \Omega$ و $L=0.0025 H$.
+    
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{12 - 3rd filter parameters.png} % Replace with actual file
+    \caption{بارامترات مرشح التوافقية الحادية عشرة في ماتلاب}
+    \label{fig:12}
+\end{figure}
+
+\newpage
+
+    \begin{figure}[H]
+      \vspace{-30pt}
+        \centering
+        \includegraphics[angle = 90, width=0.95\linewidth]{11 - Circuit with 3rd filter.png}
+        \caption{شكل الدارة النهائي مع كافة المرشحات}
+    \end{figure}
+\end{enumerate}
+
+\newpage
+بإضافة المرشح الأخير المخصص للتوافقية الحادية عشرة ($550 Hz$)، نصل إلى الحالة الشبه مثالية المطلوبة في الوظيفة:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{13 - CurrentData with 3rd filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للتيار بعد اضافة المرشح الثالث - تظهر \el{THD} بنسبة $9.93\%$}
+    \label{fig:13}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{14 - VoltageData with 3rd filter.png}
+    \caption{\small نتائج تحليل \el{FFT} للجهد بعد اضافة المرشح الثالث - تظهر \el{THD} بنسبة $4.76\%$}
+    \label{fig:14}
+\end{figure}
+
+\newpage
+
+\begin{itemize}
+    \item \textbf{تحليل التيار:} تظهر الصورة (الشكل \ref{fig:13}) استمرار انخفاض نسبة التشوه الكلي للتيار واختفاء معظم المركبات التوافقية الضارة.
+    \item \textbf{تحليل الجهد:} تظهر الصورة (الشكل \ref{fig:14}) انخفاض نسبة \el{$THD$} للجهد إلى أدنى مستوياتها، مما يجعل موجة الجهد جيبية ونقية بشكل كبير.
+\end{itemize}
+
+
+\section{مناقشة النتائج} \label{part1:sec5}
+% \thispagestyle{empty}
+
+من خلال هذه الدراسة والمحاكاة العملية باستخدام برنامج \el{\textbf{MATLAB R2023b}}، خرجنا بالنتائج التالية:
+
+\begin{enumerate}
+    \item أثبتت مرشحات التردد الرنيني \el{(\textbf{Tuned Filters})} كفاءة عالية في امتصاص تيارات التوافقيات عند ترددات الرنين المحددة، مما أدى لخفض نسبة \el{$THD$} بشكل تدريجي مع كل إضافة.
+    \item ساهمت المرشحات في تحسين معامل الاستطاعة وتقريب شكل موجة التيار والجهد من الشكل الجيبي النقي، مما يقلل من الفواقد والحرارة في عناصر الشبكة.
+    \item بفضل إضافة مرشحات الرتب 7 و 11، تمكنا من الحفاظ على جودة الجهد ضمن الحدود العالمية المسموح بها (غالباً أقل من 3\% أو 5\% حسب المواصفة).
+    \item أكدت الدراسة أن للحصول على نتائج صحيحة ومطابقة للواقع الفيزيائي يجب أن ضبط إعدادات المحاكاة بشكل دقيق و إدخال بارامترات العناصر بعناية شديدة، حيث أن أي خطأ في القيم أو الإعدادات قد يؤدي لنتائج غير دقيقة أو غير منطقية.
+\end{enumerate}
+
+{
+\clearpage
+\thispagestyle{empty}
+{\vspace*{70pt}\fontsize{55}{80}\selectfont
+\textbf{الوظيفة 2} \label{part2}
+}\\[30pt]
+{\fontsize{30}{45}\selectfont
+تصميم مرشح التمرير المنخفض \el{(Low-Pass Filter)} للتقليل من أثر التوافقيات في نظام قدرة ثلاثي الطور مع حمولة غير خطية.
+\par}
+}
+
+% --- السحر هنا: تصفير عدّاد الفصول (Sections) يدوياً ---
+\setcounter{section}{0} 
+
+\end{document}

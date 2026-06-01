@@ -1,8 +1,20 @@
 % !TEX root = ../../main.tex
 
-% \section{مقدمة} \label{part1:sec1}
-%     \thispagestyle{empty} % This removes header/footer from the current page only
-%     {\fontsize{16}{28}\selectfont
-%     سنعمل في هذه الدراسة على نمذجة نظام قدرة ثلاثي الطور يغذي حملاً غير خطي عبر \textbf{جسر تقويم (\el{Universal Bridge})}، وتحليل تأثيره على جودة الطاقة. سنركز بشكل أساسي على تصميم وتطبيق \textbf{مرشحات التردد الرنيني (\el{Tuned Filters})} لمعالجة رتب توافقية محددة لضمان بقاء مستويات التشوه ضمن الحدود العالمية المسموح بها (أقل من $3\%$ للجهد).
-%     \par}
+\section{توصيف المنظومة والنمذجة} \label{part1:sec1}
+    % \thispagestyle{empty} % This removes header/footer from the current page only
+    {\fontsize{16}{27}\selectfont
+    تتمثل الخطوة الأساسية في هذه الدراسة في بناء نموذج دقيق للنظام الكهربائي باستخدام مكتبة \el{Specialized Power Systems} في بيئة \el{MATLAB R2023b}. تم تصميم الدارة لتمثيل شبكة تغذية تغذي حملاً غير خطي، مع الأخذ بعين الاعتبار الممانعات المختلفة التي تؤثر على جودة القدرة.
+    \par}
     
+
+% \begin{figure}[H]
+%   \vspace{-10pt}
+%   \centering
+%   \includegraphics[width=1.05\textwidth]{00 - Circuit without Filters.png}
+%     \caption{دارة النظام الأصلية بدون مرشحات}
+%     \label{fig:00}
+% \end{figure}
+
+\input{part1/sections/ch1_sections/sec1_1.tex}
+\input{part1/sections/ch1_sections/sec1_2.tex}
+\input{part1/sections/ch1_sections/sec1_3.tex}

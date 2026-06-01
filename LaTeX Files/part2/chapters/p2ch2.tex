@@ -1,0 +1,62 @@
+% !TEX root = ../../main.tex
+
+% --- القسم الثاني: الحسابات النظرية للمرشح ---
+\section{الحسابات النظرية للمرشح}
+
+في هذا القسم، سنقوم بإجراء الحسابات الرياضية لتصميم المرشح بناءً على تردد رنيني جديد يختلف عن المثال المشروح في الجلسة العملية \el{($200 Hz$)} لتحقيق استجابة ترددية مختلفة.
+
+% --- 1. اختيار المعايير ---
+\subsection{اختيار المعايير}
+
+لقد تم اختيار التردد الرنيني المقترح للمرشح ليكون \el{\boldmath $f_r = 150 Hz$}. هذا الاختيار يحقق الشرط المطلوب بأن يكون التردد أعلى من التردد الأساسي \el{($50 Hz$)} وأقل من رتبة التوافقية الخامسة \el{($250 Hz$)} التي تمثل أول مصدر رئيسي للتشوه.
+
+% --- 2. حساب عناصر المرشح ---
+\subsection{حساب عناصر المرشح \el{($R, L, C$)}}
+
+بناءً على القوانين الفيزيائية الواردة في الجلسة الرابعة، نتبع الخطوات التالية:
+
+\begin{itemize}
+    \item \textbf{أولاً: فرض قيمة الحث ($L$):} سنفترض قيمة حث ثابتة للملفات التسلسلية كما في المثال المرجعي:
+    \begin{equation*}
+        \mathbf{L = 2 mH = 0.002 H}
+    \end{equation*}
+
+    \item \textbf{ثانياً: حساب سعة المكثف ($C$):} باستخدام قانون الرنين المشتق $C = \frac{1}{(2\pi f_r)^2 \cdot L}$:
+    \begin{equation*}
+        C = \frac{1}{(2 \times \pi \times 150)^2 \times 0.002}
+    \end{equation*}
+    \begin{equation*}
+        C \approx \mathbf{0.0005629 F = 562.9 \mu F}
+    \end{equation*}
+
+    \item \textbf{ثالثاً: حساب مقاومة التخميد ($R$):} نختار عامل جودة مناسب لمرشحات التمرير المنخفض وهو \textbf{$Q = 3$}.
+    \begin{enumerate}
+        \item حساب المفاعلة السعوية ($X_C$) عند التردد الرنيني:
+        \begin{equation*}
+            X_C = \frac{1}{2\pi f_r \cdot C} = \frac{1}{2 \times \pi \times 150 \times 0.0005629} \approx 1.885 \Omega
+        \end{equation*}
+        \item حساب المقاومة باستخدام القانون $R = \frac{X_C}{Q}$:
+        \begin{equation*}
+            R = \frac{1.885}{3} \approx \mathbf{0.628 \Omega}
+        \end{equation*}
+    \end{enumerate}
+\end{itemize}
+
+% --- ملخص القيم ---
+\subsection{ملخص القيم المحسوبة للإدخال في \el{MATLAB}}
+الجدول التالي يلخص النتائج النهائية اللازمة لنمذجة المرشح:
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|r|c|c|}
+\hline
+\textbf{العنصر} & \textbf{القيمة المحسوبة} & \textbf{الوحدة} \\ \hline
+\textbf{تردد الرنين ($f_r$)} & $150$ & $Hz$ \\ \hline
+\textbf{الحث ($L$)} & $0.002$ & $Henry$ \\ \hline
+\textbf{السعة ($C$)} & $562.9 \times 10^{-6}$ & $Farad$ \\ \hline
+\textbf{المقاومة ($R$)} & $0.628$ & $Ohm$ \\ \hline
+\end{tabular}
+\caption{البارامترات التصميمية لمرشح التمرير المنخفض المقترح}
+\label{tab:filter_design_summary}
+\end{table}

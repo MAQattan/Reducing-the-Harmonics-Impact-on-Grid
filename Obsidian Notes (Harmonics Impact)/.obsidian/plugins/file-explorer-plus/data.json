@@ -59,13 +59,6 @@
         "type": "FILES",
         "pattern": "MOC.md",
         "patternType": "STRICT"
-      },
-      {
-        "name": "",
-        "active": true,
-        "type": "FILES",
-        "pattern": "Problems/How To open.md",
-        "patternType": "STRICT"
       }
     ],
     "frontMatter": [

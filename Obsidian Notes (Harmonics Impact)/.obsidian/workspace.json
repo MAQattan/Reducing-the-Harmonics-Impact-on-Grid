@@ -8,91 +8,34 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4f289977d1689dc7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "The Projects Parts/Part 4.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Part 4"
-            }
-          },
-          {
-            "id": "ca41c47b541368d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LaTeX Tips/Problems/حل مشكلة خروج الكلمات إلى الهامش.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "حل مشكلة خروج الكلمات إلى الهامش"
-            }
-          },
-          {
             "id": "276dc420f796fde1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LaTeX Tips/صناديق/أكثر الطرق تطورا لانشاء صندوق.md",
+                "file": "Part 3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "أكثر الطرق تطورا لانشاء صندوق"
+              "title": "Part 3"
             }
           },
           {
-            "id": "930a458b01e14121",
+            "id": "793a1f9632e5a9da",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LaTeX Tips/Problems/حل مشكلة خروج الكلمات إلى الهامش.md",
+                "file": "Road Map.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "حل مشكلة خروج الكلمات إلى الهامش"
-            }
-          },
-          {
-            "id": "aa5fcfcc737aafd8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LaTeX Tips/صناديق/استخدام حزمة fancybox (للمظهر الكلاسيكي).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "استخدام حزمة fancybox (للمظهر الكلاسيكي)"
-            }
-          },
-          {
-            "id": "562f1a8c319380d1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LaTeX Tips/استخدام خط آخر داخل المشروع (للملاحظات مثلا).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "استخدام خط آخر داخل المشروع (للملاحظات مثلا)"
+              "title": "Road Map"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -149,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 305.5,
+    "collapsed": true
   },
   "right": {
     "id": "ace5c1d822e686cd",
@@ -281,39 +225,42 @@
       "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "aa5fcfcc737aafd8",
+  "active": "276dc420f796fde1",
   "lastOpenFiles": [
+    "MOC.md",
+    "Part 3.md",
+    "Part 2.md",
+    "Part 1.md",
+    "MATLAB/Annotation & Area.md",
+    "MATLAB/Names in MATLAB.md",
+    "Road Map.md",
+    "MATLAB/Taking Photos.md",
     "LaTeX Tips/Problems/حل مشكلة خروج الكلمات إلى الهامش.md",
-    "LaTeX Tips/صناديق/أكثر الطرق تطورا لانشاء صندوق.md",
+    "Elements Path.md",
+    "Draft.md",
+    "Prompts.md",
+    "Modeling of Harmonic Filters.md",
     "The Projects Parts/Part 4.md",
-    "LaTeX Tips/التباعد بين السطور.md",
-    "Steps Map.md",
     "The Projects Parts/Part 3.md",
     "The Projects Parts/Part 2.md",
-    "LaTeX Tips/صناديق/إنشاء صناديق بسيطة & MOC.md",
-    "LaTeX Tips/صناديق/استخدام حزمة fancybox (للمظهر الكلاسيكي).md",
-    "LaTeX Tips/صناديق/الصندوق الخفي باستخدام minipage فقط.md",
-    "LaTeX Tips/تبادل مكان الترقيم حسب الصفحة مع اسم القسم.md",
-    "LaTeX Tips/Fixing Problems 00.md",
-    "LaTeX Tips/استخدام خط آخر داخل المشروع (للملاحظات مثلا).md",
-    "LaTeX Tips/صناديق",
-    "الطريقة القياسية (fcolorbox مع minipage).md",
-    "Draft.md",
-    "LaTeX Tips/Problems/Draft 03.md",
     "Tempurory Notes/Untitled.md",
-    "LaTeX Tips/Problems/Draft 04.md",
-    "LaTeX Tips/XeLaTeX Engine/Use Fonts Folder.md",
-    "LaTeX Tips/انشاء صندوق.md",
+    "Tempurory Notes/2.md",
+    "Tempurory Notes/About LaTeX Commands.md",
+    "MATLAB/Problem 1.md",
+    "MATLAB/Configuration Parameters Window.md",
+    "MATLAB/Attachments/aedca744f12fcb61c2c96fccd91bdc69_MD5.jpg",
+    "Problems/Attachments/Pasted image 20260601182626.png",
+    "MATLAB/Attachments",
+    "Notes/Arabic Preamble sample 1.md",
+    "Notes/Note 2.md",
+    "Notes/Note 1.md",
+    "LaTeX Tips/صناديق/استخدام حزمة fancybox (للمظهر الكلاسيكي).md",
+    "LaTeX Tips/صناديق/أكثر الطرق تطورا لانشاء صندوق.md",
+    "LaTeX Tips/صناديق",
     "LaTeX Tips/XeLaTeX Engine",
-    "LaTeX Tips/Problems/خطأ عدم تعريف لغة للصندوق.md",
     "LaTeX Tips/Problems",
     "The Projects Parts",
-    "LaTeX Tips/تغير حجم خط جزء معين من النص.md",
-    "LaTeX Tips/تنسيق عنوان عناوين الأقسام (الرقم فوق الكلمة وفي المنتصف).md",
-    "LaTeX Tips/Fonts.md",
-    "LaTeX Tips/تكبير الخط العام للمستند.md",
     "LaTeX Tips",
-    "Problems/Problem 1.md",
     "MATLAB",
     "Tempurory Notes/Attachments",
     "Tempurory Notes",
@@ -325,9 +272,6 @@
     "Attachments/Index 02.png",
     "Attachments/Index 03.png",
     "Attachments/Screenshot 2026-05-06 171509.png",
-    "Attachments/Screenshot 2026-05-06 171536.png",
-    "Attachments/Screenshot 2026-04-25 154814.png",
-    "Attachments/Screenshot 2026-04-16 203504.png",
-    "Thesis/Appendices/Attachments"
+    "Attachments/Screenshot 2026-05-06 171536.png"
   ]
 }

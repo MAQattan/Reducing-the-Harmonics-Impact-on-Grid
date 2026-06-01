@@ -1,11 +1,14 @@
 % !TEX root = ../../../main.tex
 
-
-\subsection{إعدادات المحاكاة \el{(Simulation Settings)}}
-
-للحصول على نتائج دقيقة في تحليل التوافقيات \el{($FFT Analysis$)}، تم ضبط بلوك \el{powergui} وفق المعايير التالية:
+\subsection{حسابات مرشح التوافقية السابعة ($n=7$)}
 \begin{itemize}
-    \item تم اختيار \textbf{\el{Simulation type}} على الوضع \el{Discrete} (متقطع) بدلاً من الوضع المستمر، وذلك لأن النظام يحتوي على عناصر إلكترونيات قدرة \el{(Diodes)} تتطلب تمثيلاً دقيقاً لعمليات التبديل.
-    \item تم تحديد زمن العينة  \textbf{\el{Sample time}} بقيمة دقيقة جداً وهي $1 \times 10^{-6} s$. هذا الزمن الصغير ضروري جداً لالتقاط الرتب التوافقية العالية بدقة ومنع حدوث أخطاء "الطي" \el{(Aliasing)} في الطيف الترددي.
+    \item \textbf{تردد الرنين:} $f_{r7} = 7 \times 50 = 350 Hz$.
+    \item \textbf{حساب الحث ($L_7$):}
+    \begin{equation*}
+        L_7 = \frac{1}{(2 \pi \times 350)^2 \times 3.339 \times 10^{-5}} \approx \mathbf{0.00619 H} \text{ أو } (6.19 mH)
+    \end{equation*}
+    \item \textbf{حساب المقاومة ($r_7$):}
+    \begin{equation*}
+        r_7 = \frac{\sqrt{0.00619 / 3.339 \times 10^{-5}}}{75} \approx \mathbf{0.1815 \Omega}
+    \end{equation*}
 \end{itemize}
-

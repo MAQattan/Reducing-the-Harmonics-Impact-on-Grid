@@ -1,15 +1,11 @@
 % !TEX root = ../../../main.tex
 
-\subsection{قوانين التصميم المستخدمة}
-تعتمد عملية الحساب على القوانين الفيزيائية التالية:
-\begin{enumerate}
-    \item \textbf{تردد الرنين ($f_r$):} $f_r = n \times f$ (حيث $n$ هي رتبة التوافقية).
-    \item \textbf{قانون الحث ($L$):} يُشتق من علاقة الرنين الأساسية $f_r = \frac{1}{2 \pi \sqrt{LC}}$ ليصبح:
-    \begin{equation*}
-        L_n = \frac{1}{(2 \pi f_r)^2 \times C}
-    \end{equation*}
-    \item \textbf{قانون المقاومة ($r$):} يُشتق من علاقة عامل الجودة $Q = \frac{X_0}{r}$ حيث $X_0 = \sqrt{\frac{L}{C}}$، ليصبح:
-    \begin{equation*}
-        r_n = \frac{\sqrt{L_n / C}}{Q}
-    \end{equation*}
-\end{enumerate}
+\subsection{إعداد أدوات القياس}
+لتمكين البرنامج من تحليل الإشارات، تم إجراء تعديلات تقنية هامة على كتل السكوب \el{(Scopes)} الخاصة بالجهد والتيار قبل المقوم:
+\begin{itemize}
+    \item \textbf{تسجيل البيانات \el{(Data Logging)}:} تم تفعيل خيار \el{\textbf{Log data to workspace}} لضمان تصدير قيم الجهد والتيار إلى مساحة عمل ماتلاب.
+    \item \textbf{تنسيق البيانات \el{(Save Format)}:} تم ضبط تنسيق الحفظ على \el{\textbf{Structure with time}}، وهو التنسيق الوحيد الذي تتعرف عليه أداة تحليل \el{FFT} في النسخ الحديثة.
+    \item \textbf{إعدادات الموديل:} تم إلغاء تحديد خيار \el{\textbf{Single simulation output}} من إعدادات الموديل \el{(Model Settings)} لضمان ظهور المتغيرات بشكل مستقل في قائمة \el{FFT Analyzer}.
+    \item \textbf{اسم المتحولة \el{(Variable Name)}:} تم تسمية المتحولة الخاصة بالتيار \el{"CurrentData"} وبالجهد \el{"VoltageData"} لتسهيل التعرف عليها أثناء التحليل.
+\end{itemize}
+

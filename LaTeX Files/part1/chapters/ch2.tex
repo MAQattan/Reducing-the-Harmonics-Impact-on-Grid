@@ -1,20 +1,22 @@
 % !TEX root = ../../main.tex
 
-\section{توصيف المنظومة والنمذجة} \label{part1:sec2}
-    % \thispagestyle{empty} % This removes header/footer from the current page only
-    {\fontsize{16}{27}\selectfont
-    تتمثل الخطوة الأساسية في هذه الدراسة في بناء نموذج دقيق للنظام الكهربائي باستخدام مكتبة \el{Specialized Power Systems} في بيئة \el{MATLAB R2023b}. تم تصميم الدارة لتمثيل شبكة تغذية تغذي حملاً غير خطي، مع الأخذ بعين الاعتبار الممانعات المختلفة التي تؤثر على جودة القدرة.
-    \par}
-    
+\section{الحسابات النظرية\\ للمرشحات} \label{part1:sec2}
+%   \thispagestyle{empty} % This removes header/footer from the current page only
+  {\fontsize{16}{27}\selectfont
+  لتحسين جودة القدرة وتخفيض نسبة التشوه التوافقي ($THD$)، يتم تصميم مرشحات تردد رنيني \el{\textbf{(Tuned Filters)}} تسلسلية من النوع ($RLC$). الهدف من هذه المرشحات هو توفير مسار منخفض الممانعة لتيارات التوافقيات عند ترددات الرنين الخاصة بها، مما يمنعها من الانتشار في الشبكة.
+  \par}
+ \vspace{5pt} 
+{\sloppy
+\noindent تعتمد الحسابات على البارامترات الأساسية التالية المستخرجة من "الجلسة الثالثة":}
+\begin{itemize}
+    \item \textbf{التردد الأساسي ($f$):} $50 Hz$.
+    \item \textbf{سعة المكثف ($C$):} تم حسابها سابقاً لتصحيح عامل الاستطاعة وهي ثابتة لكافة المرشحات: $C = 3.339 \times 10^{-5} F$.
+    \item \textbf{عامل الجودة ($Q$):} تم اختياره بقيمة $75$ لتحقيق دقة ترشيح مناسبة وتوازن بين عرض الحزمة وممانعة الرنين.
+\end{itemize}
 
-% \begin{figure}[H]
-%   \vspace{-10pt}
-%   \centering
-%   \includegraphics[width=1.05\textwidth]{00 - Circuit without Filters.png}
-%     \caption{دارة النظام الأصلية بدون مرشحات}
-%     \label{fig:00}
-% \end{figure}
+
 
 \input{part1/sections/ch2_sections/sec2_1.tex}
 \input{part1/sections/ch2_sections/sec2_2.tex}
 \input{part1/sections/ch2_sections/sec2_3.tex}
+\input{part1/sections/ch2_sections/sec2_4.tex}

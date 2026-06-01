@@ -1,17 +1,14 @@
 % !TEX root = ../../../main.tex
 
-
-\subsection{إعدادات أداة التحليل \el{(FFT Tool Configuration)}}
-
-قبل البدء بعملية الترشيح، تم ضبط السكوبات الخاصة بالجهد والتيار لتسجيل البيانات في مساحة العمل \el{(Workspace)} بتنسيق \el{Structure with time}. في أداة \el{FFT}، تم ضبط التردد الأساسي على $50 Hz$، وتحليل الإشارة بدءاً من الزمن $0.01 s$ لضمان استقرار الدارة.
-
-\newpage
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.45\linewidth]{01 - CurrentData without filters - copy.png}
-    \includegraphics[width=0.45\linewidth]{02 - VoltageData without filters - copy.png}
-    \caption{إعدادات أداة التحليل \el{(FFT)} للتيار (يمين) وللجهد (يسار)}
-    \label{fig:fft_baseline}
-\end{figure}
-
+\subsection{حسابات مرشح التوافقية الحادية عشرة ($n=11$)}
+\begin{itemize}
+    \item \textbf{تردد الرنين:} $f_{r11} = 11 \times 50 = 550 Hz$.
+    \item \textbf{حساب الحث ($L_{11}$):}
+    \begin{equation*}
+        L_{11} = \frac{1}{(2 \pi \times 550)^2 \times 3.339 \times 10^{-5}} \approx \mathbf{0.0025 H} \text{ أو } (2.5 mH)
+    \end{equation*}
+    \item \textbf{حساب المقاومة ($r_{11}$):}
+    \begin{equation*}
+        r_{11} = \frac{\sqrt{0.0025 / 3.339 \times 10^{-5}}}{75} \approx \mathbf{0.115 \Omega}
+    \end{equation*}
+\end{itemize}
