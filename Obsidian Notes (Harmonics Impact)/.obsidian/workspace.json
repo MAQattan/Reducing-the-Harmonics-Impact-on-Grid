@@ -13,6 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Part 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Part 2"
+            }
+          },
+          {
+            "id": "e46a990967d4d58c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Part 3.md",
                 "mode": "source",
                 "source": false
@@ -35,7 +49,8 @@
               "title": "Road Map"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tempurory Notes/Untitled.md",
+                "file": "Part 3.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +134,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Untitled"
+              "title": "Backlinks for Part 3"
             }
           },
           {
@@ -225,15 +240,15 @@
       "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "276dc420f796fde1",
+  "active": "e46a990967d4d58c",
   "lastOpenFiles": [
-    "MOC.md",
-    "Part 3.md",
     "Part 2.md",
+    "Part 3.md",
+    "Road Map.md",
+    "MOC.md",
     "Part 1.md",
     "MATLAB/Annotation & Area.md",
     "MATLAB/Names in MATLAB.md",
-    "Road Map.md",
     "MATLAB/Taking Photos.md",
     "LaTeX Tips/Problems/حل مشكلة خروج الكلمات إلى الهامش.md",
     "Elements Path.md",

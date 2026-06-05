@@ -1,67 +1,58 @@
 % !TEX root = ../../main.tex
 
-\section{النمذجة وإدخال البارامترات \el{(Practical Implementation)}}
+\section{النمذجة وإدخال البارامترات} \label{part2:sec3}
 
-يركز هذا القسم على الجانب التطبيقي لبناء مرشح التمرير المنخفض \el{(\textbf{Low Pass Filter})} داخل بيئة \el{\textbf{Simulink}}، حيث تم تعديل الموديل السابق ليتناسب مع البنية الجديدة للمرشح التي تتألف من ملفات تسلسلية ومخمدات \el{(RC)} تفرعية.
+{\fontsize{16}{27}\selectfont
+ يركز هذا القسم على الجانب التطبيقي لبناء مرشح التمرير المنخفض \el{(Low Pass Filter)} داخل بيئة \el{Simulink}، حيث تم تعديل الموديل السابق ليتناسب مع البنية الجديدة للمرشح التي تتألف من ملفات تسلسلية ومخمدات \el{(RC)} تفرعية.
+\par}
 
 % --- 3.1 بناء المخطط الصندوقي ---
 \subsection{بناء المخطط الصندوقي \el{(Circuit Topology)}}
 
 لتحقيق استجابة "تمرير منخفض"، تم إدراج ملفات خنق \el{(Inductors)} على التوالي مع خطوط التغذية الثلاثة الواصلة إلى المقوم. بعد هذه الملفات مباشرة، تم توصيل فروع مكونة من مقاومة ومكثف على التوالي موصلة نجمياً \el{(Wye-connected)} إلى الأرضي. تضمن هذه البنية إجبار التيارات التوافقية ذات التردد العالي على المرور عبر المسار التفرعي إلى الأرضي، بينما يمر التردد الأساسي \el{($50 Hz$)} إلى الحمل.
 
+\newpage
+
+\begin{figure}[H]
+    \vspace{-30pt}
+    \centering
+    \includegraphics[angle=270,width=0.8\linewidth]{20 - Circuit with Low-Pass Filter.png}
+    \caption{المخطط الكامل للدارة بعد إضافة مرشح التمرير المنخفض}
+\end{figure}
+
+\newpage
+
 % --- 3.2 إدخال بارامترات العناصر ---
-\subsection{إدخال بارامترات العناصر \el{(Parameter Configuration)}}
+\subsection{إدخال بارامترات العناصر}
 
 تم ضبط قيم العناصر بناءً على الحسابات النظرية التي أجريناها سابقاً لتردد رنيني قدره \el{$150 Hz$}. توضح الأشكال التالية كيفية إدخال هذه القيم داخل بلوكات \el{Simulink}:
 
 \begin{enumerate}
-    \item \textbf{قيم الحثيات \el{(Inductances)}:} تم ضبط الملفات التسلسلية على القيمة المفروضة \el{$0.002 H$}.
+    \item \textbf{الملفات التسلسلية \el{(Inductances)}:} تم استخدام بلوك \el{\textit{Series RLC Branch}} وضبط نوع الفرع على $L$ فقط، مع إدخال القيمة المحسوبة $0.002\ H$ (أو $2\ mH$) لضمان توفير الممانعة اللازمة عند الترددات العالية.
+    
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\linewidth]{15 - Inductances of Low-Pass filter.png}
+        \includegraphics[width=0.85\linewidth]{15 - Inductances of Low-Pass filter.png}
         \caption{نافذة بارامترات ملفات الخنق في النموذج المطور}
     \end{figure}
 
-    \item \textbf{قيم المقاومات \el{(Resistances)}:} تم إدخال قيمة مقاومة التخميد المحسوبة \el{$0.628 \Omega$}.
+    \item \textbf{مقاومات التخميد \el{(Resistances)}:}في الفروع التفرعية، تم ضبط نوع الفرع على $R$ وإدخال القيمة $0.628 \Omega$. تعمل هذه المقاومة على تخميد الرنين وضمان استقرار النظام ومنع التذبذبات غير المرغوبة.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\linewidth]{16 - Resistances of Low-Pass filter.png}
+        \includegraphics[width=0.85\linewidth]{16 - Resistances of Low-Pass filter.png}
         \caption{إدخال قيم المقاومات الخاصة بفرع الترشيح}
     \end{figure}
 
-    \item \textbf{قيم السعات \el{(Capacitances)}:} تم ضبط المكثفات على القيمة \el{$562.9 \mu F$}.
+    \clearpage
+
+    \item \textbf{المكثفات \el{(Capacitances)}:}تم ضبط نوع الفرع التفرعي ليتضمن السعة، وإدخال القيمة الدقيقة $562.9 \times 10^{-6} F$ (أو $562.9 \mu F$).
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\linewidth]{17 - Capacitances of Low-Pass filter.png}
+        \includegraphics[width=0.85\linewidth]{17 - Capacitances of Low-Pass filter.png}
         \caption{ضبط قيم السعات لمرشح التمرير المنخفض}
     \end{figure}
 \end{enumerate}
 
+\clearpage
+
 % --- القسم الرابع: مناقشة وتحليل النتائج ---
-\section{مناقشة وتحليل النتائج \el{(Results \& Discussion)}}
-
-بعد إتمام عملية النمذجة، نلاحظ الشكل النهائي للدارة في بيئة \el{Simulink} كما هو موضح أدناه:
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.05\linewidth]{20 - Circuit with Low-Pass Filter.png}
-    \caption{المخطط الصندوقي الكامل للدارة بعد إضافة مرشح التمرير المنخفض}
-\end{figure}
-
-أظهرت نتائج المحاكاة تحسناً جذرياً في جودة القدرة، ويمكن تلخيص النتائج كما يلي:
-
-\begin{itemize}
-    \item \textbf{تحليل التيار:} نلاحظ انخفاض نسبة التشوه التوافقي الكلي للتيار \el{($THD_I$)} بشكل كبير جداً، حيث تخلص المرشح من كافة الرتب التوافقية العالية.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.9\linewidth]{18 - CurrentData with Low-Pass Filter.png}
-        \caption{طيف التردد للتيار بوجود مرشح التمرير المنخفض}
-    \end{figure}
-
-    \item \textbf{تحليل الجهد:} أصبحت موجة الجهد أكثر نقاءً، واستقرت نسبة \el{$THD_V$} ضمن المعايير المسموح بها عالمياً.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.9\linewidth]{19 - VoltageData with Low-Pass Filter.png}
-        \caption{طيف التردد للجهد بوجود مرشح التمرير المنخفض}
-    \end{figure}
-\end{itemize}

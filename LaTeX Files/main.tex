@@ -4,7 +4,7 @@
 \input{preamble.tex}
 
 % الاستدعاء الذكي لملف الديباجة المستقل
-% \includeonly{part2/chapters/p2ch2} % لتجريب فصلين فقط أثناء التطوير
+% \includeonly{part2/chapters/p2ch3, part2/chapters/p2ch4} % لتجريب فصلين فقط أثناء التطوير
 
 
 
@@ -31,31 +31,35 @@
 \pagenumbering{arabic} % (السحر الثاني) العودة للترقيم النظامي (1, 2, 3...) وتصفير العداد لتبدأ هذه 
 \pagestyle{mainstyle}
 {
-\clearpage 
+\newpage 
 \thispagestyle{empty}
+\vfill
 {\vspace*{70pt}\fontsize{55}{80}\selectfont
 \textbf{الوظيفة 1} \label{part1}
 }\\[30pt]
 {\fontsize{30}{45}\selectfont
 تصميم مرشحات التردد الرنيني \el{(Tuned Filters)} للتوافقية السابعة والحادية عشرة في نظام قدرة ثلاثي الطور مع حمولة غير خطية للتخلص من التوافقيات وضمان جودة الطاقة ضمن الحدود المسموح بها.
 \par}
+\vfill
+\newpage
 }
 \include{part1/chapters/ch1}
 \include{part1/chapters/ch2}
 \include{part1/chapters/ch3}
-\include{part1/chapters/ch4}
-\include{part1/chapters/ch5}
 
 {
-\clearpage
+\newpage
 \thispagestyle{empty}
+\vfill
 {\vspace*{70pt}\fontsize{55}{80}\selectfont
 \textbf{الوظيفة 2} \label{part2}
 }\\[30pt]
 {\fontsize{30}{45}\selectfont
 تصميم مرشح التمرير المنخفض \el{(Low-Pass Filter)} للتقليل من أثر التوافقيات في نظام قدرة ثلاثي الطور مع حمولة غير خطية.
 \par}
-}
+\vfill
+\newpage
+\par}
 
 % --- السحر هنا: تصفير عدّاد الفصول (Sections) يدوياً ---
 \setcounter{section}{0} 
@@ -63,4 +67,5 @@
 \include{part2/chapters/p2ch1}
 \include{part2/chapters/p2ch2}
 \include{part2/chapters/p2ch3}
+\include{part2/chapters/p2ch4}
 \end{document}

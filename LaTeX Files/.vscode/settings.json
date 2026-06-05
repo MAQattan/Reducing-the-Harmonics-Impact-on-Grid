@@ -45,6 +45,6 @@
   "editor.unicodeHighlight.includeComments": false,
   "files.encoding": "utf8",
   "files.autoGuessEncoding": false, // Make it "true" when you have to open old files that are't UTF-8. 
-  "editor.rulers": [80, 160, 240, 320, 400]  // to create vertical lines
+  // "editor.rulers": [80, 160, 240, 320, 400]  // to create vertical lines
 
 }
