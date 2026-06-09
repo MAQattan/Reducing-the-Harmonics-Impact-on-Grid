@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.14)  3 JUN 2026 19:51
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.14)  9 JUN 2026 16:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/MAQ Disc/College/My College Projects/Reducing the Harmonics Impact/LaTeX Files/main"
-(c:/MAQ Disc/College/My College Projects/Reducing the Harmonics Impact/LaTeX Files/main.tex
+**"c:/MAQ_Disc/College/My_College_Projects/Reducing the Harmonics Impact/LaTeX Files/main"
+(c:/MAQ_Disc/College/My_College_Projects/Reducing the Harmonics Impact/LaTeX Files/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -800,10 +800,12 @@ File: hyperref-xetex-bidi.def 2025/12/06 v1.5 bidi adaptations for hyperref pack
 ) (c:/texlive/2026/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 )
-Package hyperref Info: Option `unicode' set `true' on input line 158.
-Package hyperref Info: Option `colorlinks' set `true' on input line 158.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 158.
-) (c:/texlive/2026/texmf-dist/tex/latex/bidi/float-xetex-bidi.def
+Package hyperref Info: Option `unicode' set `true' on input line 188.
+Package hyperref Info: Option `colorlinks' set `true' on input line 188.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 188.
+ (c:/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)) (c:/texlive/2026/texmf-dist/tex/latex/bidi/float-xetex-bidi.def
 File: float-xetex-bidi.def 2013/04/04 v0.2 bidi adaptations for float package for XeTeX engine
 )
 LaTeX Font Info:    Font shape `TU/IBMPlexSansArabic-Regular.ttf(0)/m/n' will be
@@ -1014,31 +1016,20 @@ LaTeX Font Info:    Font shape `TU/IBMPlexSansArabic-Regular.ttf(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 32.
 [1
 
-])
-LaTeX Font Info:    Font shape `TU/IBMPlexSansArabic-Regular.ttf(0)/m/n' will be
-(Font)              scaled to size 55.0pt on input line 37.
-LaTeX Font Info:    Font shape `TU/IBMPlexSansArabic-Regular.ttf(0)/b/n' will be
-(Font)              scaled to size 55.0pt on input line 38.
-LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
-(Font)              scaled to size 30.0pt on input line 41.
-
-Underfull \hbox (badness 4254) in paragraph at lines 38--42
-[][]\TU/IBMPlexSans(0)/m/n/30 Filters)[] []\TU/IBMPlexSansArabic-Regular.ttf(0)/m/n/30 للتوافقية السابعة والحادية[]
- []
+]) [2
 
 
-Underfull \hbox (badness 7685) in paragraph at lines 38--42
-[]\TU/IBMPlexSansArabic-Regular.ttf(0)/m/n/30 غير خطية للتخلص من التوافقيات[]
- []
-
-
-Underfull \hbox (badness 2828) in paragraph at lines 38--42
-[]\TU/IBMPlexSansArabic-Regular.ttf(0)/m/n/30 وضمان جودة الطاقة ضمن الحدود[]
- []
-
-[1
 
 ]
+LaTeX Font Info:    Font shape `TU/IBMPlexSansArabic-Regular.ttf(0)/m/n' will be
+(Font)              scaled to size 55.0pt on input line 42.
+LaTeX Font Info:    Font shape `TU/IBMPlexSansArabic-Regular.ttf(0)/b/n' will be
+(Font)              scaled to size 55.0pt on input line 43.
+LaTeX Font Info:    Font shape `TU/IBMPlexSansArabic-Regular.ttf(0)/m/n' will be
+(Font)              scaled to size 20.0pt on input line 45.
+LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
+(Font)              scaled to size 20.0pt on input line 46.
+ [1]
 \openout2 = `part1/chapters/ch1.aux'.
 
  (./part1/chapters/ch1.tex
@@ -1076,14 +1067,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--9
 [][]
  []
 
-LaTeX Font Info:    Font shape `TU/IBMPlexSansArabic-Regular.ttf(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 10.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2
+[2
 
 ]
+LaTeX Font Info:    Font shape `TU/IBMPlexSansArabic-Regular.ttf(0)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 10.
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/n' will be
 (Font)              scaled to size 12.0pt on input line 15.
 
@@ -1112,37 +1100,34 @@ File: figures/02 - VoltageData without filters - copy.png Graphic file (type bmp
 \openout2 = `part1/chapters/ch2.aux'.
 
  (./part1/chapters/ch2.tex
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 7.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 3.
-
-LaTeX Font Info:    Calculating math sizes for size <16> on input line 6.
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
-(Font)              size <17.28> substituted on input line 6.
+(Font)              size <17.28> substituted on input line 7.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 6.
+(Font)              size <17.28> substituted on input line 7.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 6.
+(Font)              size <17.28> substituted on input line 7.
 
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/b/n' will be
-(Font)              scaled to size 16.0pt on input line 6.
+(Font)              scaled to size 16.0pt on input line 7.
 
-Underfull \hbox (badness 2237) in paragraph at lines 6--7
+Underfull \hbox (badness 2237) in paragraph at lines 7--8
 []\TU/IBMPlexSansArabic-Regular.ttf(0)/m/n/16 تصميم مرشحات تردد رنيني [][]\TU/IBMPlexSans(0)/b/n/16 (Tuned Filters)[] []\TU/IBMPlexSansArabic-Regular.ttf(0)/m/n/16 تسلسلية من النوع[]
  []
 
-(./part1/sections/ch2_sections/sec2_1.tex
-Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
 [5
 
 
 
-]) (./part1/sections/ch2_sections/sec2_2.tex
+] (./part1/sections/ch2_sections/sec2_1.tex
+Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
+) (./part1/sections/ch2_sections/sec2_2.tex
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1172,12 +1157,16 @@ Missing character: There is no
  (U+000A) in font [lmromandemi10-regular]:mapping=tex-text;!
 ) (./part1/sections/ch2_sections/sec2_4.tex
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
-)) [6]
+[6])) [7]
 \openout2 = `part1/chapters/ch3.aux'.
 
  (./part1/chapters/ch3.tex (./part1/sections/ch3_sections/sec3_1.tex
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
-) (./part1/sections/ch3_sections/sec3_2.tex
+[8
+
+
+
+]) (./part1/sections/ch3_sections/sec3_2.tex
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
 File: figures/00 - Circuit without Filters.png Graphic file (type bmp)
 <figures/00 - Circuit without Filters.png>
@@ -1186,11 +1175,7 @@ Overfull \hbox (21.34087pt too wide) in paragraph at lines 9--10
  [][][][][][] 
  []
 
-[7
-
-
-
-] [8]
+[9]
 File: figures/01 - CurrentData without filters.png Graphic file (type bmp)
 <figures/01 - CurrentData without filters.png>
 
@@ -1205,7 +1190,7 @@ Overfull \hbox (21.34087pt too wide) in paragraph at lines 26--27
  [][][][][][] 
  []
 
-[9]) (./part1/sections/ch3_sections/sec3_3.tex
+[10]) (./part1/sections/ch3_sections/sec3_3.tex
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1224,12 +1209,12 @@ Overfull \hbox (21.34087pt too wide) in paragraph at lines 13--14
  [][][][][][] 
  []
 
-[10]
+[11]
 File: figures/05 - CurrentData with 1st filter.png Graphic file (type bmp)
 <figures/05 - CurrentData with 1st filter.png>
 File: figures/06 - VoltageData with 1st filter.png Graphic file (type bmp)
 <figures/06 - VoltageData with 1st filter.png>
- [11]) (./part1/sections/ch3_sections/sec3_4.tex
+ [12]) (./part1/sections/ch3_sections/sec3_4.tex
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1249,42 +1234,47 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 File: figures/08 - 2nd filter parameters.png Graphic file (type bmp)
 <figures/08 - 2nd filter parameters.png>
-[12]
+[13]
 File: figures/07 - Circuit with 2nd filter.png Graphic file (type bmp)
 <figures/07 - Circuit with 2nd filter.png>
 
 Overfull \vbox (2.44978pt too high) has occurred while \output is active []
 
- [13]
+ [14]
 File: figures/09 - CurrentData with 2nd filter.png Graphic file (type bmp)
 <figures/09 - CurrentData with 2nd filter.png>
 File: figures/10 - VoltageData with 2nd filter.png Graphic file (type bmp)
 <figures/10 - VoltageData with 2nd filter.png>
- [14]
+ [15]
 File: figures/12 - 3rd filter parameters.png Graphic file (type bmp)
 <figures/12 - 3rd filter parameters.png>
- [15]
+ [16]
 File: figures/11 - Circuit with 3rd filter.png Graphic file (type bmp)
 <figures/11 - Circuit with 3rd filter.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
+ [17]
 File: figures/13 - CurrentData with 3rd filter.png Graphic file (type bmp)
 <figures/13 - CurrentData with 3rd filter.png>
 File: figures/14 - VoltageData with 3rd filter.png Graphic file (type bmp)
 <figures/14 - VoltageData with 3rd filter.png>
- [17]) (./part1/sections/ch3_sections/sec3_5.tex
+ [18]) (./part1/sections/ch3_sections/sec3_5.tex
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
-)) [18] [19
+)) [19]
+Underfull \hbox (badness 4254) in paragraph at lines 61--65
+[]\TU/IBMPlexSansArabic-Regular.ttf(0)/m/n/20 تصميم مرشح التمرير المنخفض [][]\TU/IBMPlexSans(0)/m/n/20 (Low-Pass Filter)[][]
+ []
+
+[20
 
 
 ]
 \openout2 = `part2/chapters/p2ch1.aux'.
 
- (./part2/chapters/p2ch1.tex) [20
+ (./part2/chapters/p2ch1.tex [21
 
-]
+]) [22]
 \openout2 = `part2/chapters/p2ch2.aux'.
 
  (./part2/chapters/p2ch2.tex
@@ -1292,17 +1282,17 @@ Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textenglish' on input line 16.
+(hyperref)                removing `\textenglish' on input line 17.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 16.
+(hyperref)                removing `math shift' on input line 17.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 16.
+(hyperref)                removing `math shift' on input line 17.
 
-[21
+[23
 
 
 
@@ -1312,22 +1302,22 @@ Missing character: There is no
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textenglish' on input line 48.
+(hyperref)                removing `\textenglish' on input line 49.
 
-) [22]
+) [24]
 \openout2 = `part2/chapters/p2ch3.aux'.
 
  (./part2/chapters/p2ch3.tex
-Underfull \hbox (badness 1163) in paragraph at lines 6--7
+Underfull \hbox (badness 1163) in paragraph at lines 7--8
 []\TU/IBMPlexSansArabic-Regular.ttf(0)/m/n/16 ليتناسب مع البنية الجديدة للمرشح التي تتألف من ملفات تسلسلية[]
  []
 
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textenglish' on input line 10.
+(hyperref)                removing `\textenglish' on input line 11.
 
-[23
+[25
 
 
 
@@ -1337,23 +1327,23 @@ File: figures/20 - Circuit with Low-Pass Filter.png Graphic file (type bmp)
 
 Overfull \vbox (9.91434pt too high) has occurred while \output is active []
 
- [24]
+ [26]
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
 LaTeX Font Info:    Font shape `TU/IBMPlexSans(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 31.
+(Font)              scaled to size 12.0pt on input line 32.
 File: figures/15 - Inductances of Low-Pass filter.png Graphic file (type bmp)
 <figures/15 - Inductances of Low-Pass filter.png>
 File: figures/16 - Resistances of Low-Pass filter.png Graphic file (type bmp)
 <figures/16 - Resistances of Low-Pass filter.png>
-[25]
+[27]
 File: figures/17 - Capacitances of Low-Pass filter.png Graphic file (type bmp)
 <figures/17 - Capacitances of Low-Pass filter.png>
- [26
+ [28
 
 ])
 \openout2 = `part2/chapters/p2ch4.aux'.
 
- (./part2/chapters/p2ch4.tex [27
+ (./part2/chapters/p2ch4.tex [29
 
 
 
@@ -1362,14 +1352,14 @@ File: figures/17 - Capacitances of Low-Pass filter.png Graphic file (type bmp)
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
 File: figures/18 - CurrentData with Low-Pass Filter.png Graphic file (type bmp)
 <figures/18 - CurrentData with Low-Pass Filter.png>
-[28
+[30
 
 ]
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
 File: figures/19 - VoltageData with Low-Pass Filter.png Graphic file (type bmp)
 <figures/19 - VoltageData with Low-Pass Filter.png>
 Missing character: There is no ‏ (U+200F) in font [IBMPlexSansArabic-Bold.ttf]/OT:script=arab;language=dflt;!
-) [29
+) [31
 
 ] (./main.aux (./part1/chapters/ch1.aux) (./part1/chapters/ch2.aux) (./part1/chapters/ch3.aux) (./part2/chapters/p2ch1.aux) (./part2/chapters/p2ch2.aux) (./part2/chapters/p2ch3.aux) (./part2/chapters/p2ch4.aux))
  ***********
@@ -1382,15 +1372,15 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 230B61B4102A3FC3CCCCAFD92DDA2044;7834.
+(rerunfilecheck)             Checksum: 3D8DD29A94FEA77B5A163EB730B3E8E8;7752.
  ) 
 Here is how much of TeX's memory you used:
- 27773 strings out of 468168
- 592312 string characters out of 5436524
- 1021704 words of memory out of 5000000
- 55817 multiletter control sequences out of 15000+600000
- 642428 words of font info for 170 fonts, out of 8000000 for 9000
+ 27821 strings out of 468168
+ 593357 string characters out of 5436524
+ 1020746 words of memory out of 5000000
+ 55860 multiletter control sequences out of 15000+600000
+ 642436 words of font info for 171 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  97i,12n,98p,1250b,956s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (32 pages).
+Output written on main.pdf (35 pages).

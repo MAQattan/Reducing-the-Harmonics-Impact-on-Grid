@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Road Map.md",
+                "file": "Part 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Road Map"
+              "title": "Part 1"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -107,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5,
-    "collapsed": true
+    "width": 305.5
   },
   "right": {
     "id": "ace5c1d822e686cd",
@@ -240,19 +239,20 @@
       "obsidian-local-images-plus:Local Images Plus  0.16.4\r\nLocalize attachments (plugin folder)": false
     }
   },
-  "active": "e46a990967d4d58c",
+  "active": "793a1f9632e5a9da",
   "lastOpenFiles": [
-    "Part 2.md",
-    "Part 3.md",
-    "Road Map.md",
     "MOC.md",
-    "Part 1.md",
+    "MATLAB/Configuration Parameters Window.md",
     "MATLAB/Annotation & Area.md",
     "MATLAB/Names in MATLAB.md",
+    "Draft.md",
+    "Elements Path.md",
+    "Part 1.md",
+    "Road Map.md",
+    "Part 3.md",
+    "Part 2.md",
     "MATLAB/Taking Photos.md",
     "LaTeX Tips/Problems/حل مشكلة خروج الكلمات إلى الهامش.md",
-    "Elements Path.md",
-    "Draft.md",
     "Prompts.md",
     "Modeling of Harmonic Filters.md",
     "The Projects Parts/Part 4.md",
@@ -262,7 +262,6 @@
     "Tempurory Notes/2.md",
     "Tempurory Notes/About LaTeX Commands.md",
     "MATLAB/Problem 1.md",
-    "MATLAB/Configuration Parameters Window.md",
     "MATLAB/Attachments/aedca744f12fcb61c2c96fccd91bdc69_MD5.jpg",
     "Problems/Attachments/Pasted image 20260601182626.png",
     "MATLAB/Attachments",

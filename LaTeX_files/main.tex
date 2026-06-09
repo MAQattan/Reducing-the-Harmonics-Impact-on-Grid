@@ -23,6 +23,10 @@
 
 \input{index_page.tex}
 
+\clearpage
+\thispagestyle{empty} % إخفاء التذييل في حال تم توليد صفحة فارغة
+\cleardoublepage     % التأكد الديناميكي من تناوب الهوامش وجهين بسلام
+
 % \tableofcontents
 % \listoffigures
 % \listoftables
@@ -32,12 +36,13 @@
 \pagestyle{mainstyle}
 {
 \newpage 
+\setfooter{الوظيفة الأولى}
 \thispagestyle{empty}
 \vfill
-{\vspace*{70pt}\fontsize{55}{80}\selectfont
-\textbf{الوظيفة 1} \label{part1}
-}\\[30pt]
-{\fontsize{30}{45}\selectfont
+{\vspace*{130pt}\fontsize{55}{80}\selectfont
+\textbf{الوظيفة الأولى} \label{part1}
+}\\[40pt]
+{\fontsize{20}{30}\selectfont
 تصميم مرشحات التردد الرنيني \el{(Tuned Filters)} للتوافقية السابعة والحادية عشرة في نظام قدرة ثلاثي الطور مع حمولة غير خطية للتخلص من التوافقيات وضمان جودة الطاقة ضمن الحدود المسموح بها.
 \par}
 \vfill
@@ -49,12 +54,13 @@
 
 {
 \newpage
+\setfooter{الوظيفة الثانية}
 \thispagestyle{empty}
 \vfill
-{\vspace*{70pt}\fontsize{55}{80}\selectfont
-\textbf{الوظيفة 2} \label{part2}
-}\\[30pt]
-{\fontsize{30}{45}\selectfont
+{\vspace*{130pt}\fontsize{55}{80}\selectfont
+\textbf{الوظيفة الثانية} \label{part2}
+}\\[40pt]
+{\fontsize{20}{30}\selectfont
 تصميم مرشح التمرير المنخفض \el{(Low-Pass Filter)} للتقليل من أثر التوافقيات في نظام قدرة ثلاثي الطور مع حمولة غير خطية.
 \par}
 \vfill
