@@ -1,0 +1,29 @@
+PWD c:/MAQ_Disc/College/My_College_Projects/Reducing_Harmonics_Impact/LaTeX_files
+INPUT c:/texlive/2026/texmf.cnf
+INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT c:/MAQ_Disc/College/My_College_Projects/Reducing_Harmonics_Impact/LaTeX_files/Reducing the Harmonicx Impact.tex
+OUTPUT Reducing the Harmonicx Impact.log
+INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+INPUT c:/texlive/2026/texmf-dist/tex/latex/base/size12.clo
+INPUT c:/texlive/2026/texmf-dist/tex/latex/base/size12.clo
+INPUT c:/texlive/2026/texmf-dist/tex/latex/base/size12.clo
+INPUT c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def

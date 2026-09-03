@@ -2,6 +2,7 @@
 
 [![MATLAB](https://img.shields.io/badge/MATLAB-R2023b-blue)](https://www.mathworks.com/products/matlab.html)
 [![Simulink](https://img.shields.io/badge/Simulink-Specialized_Power_Systems-orange)](https://www.mathworks.com/products/simulink.html)
+[![Simulink](https://img.shields.io/badge/Code-LaTeX-red)](https://www.mathworks.com/products/latex.html)
 [![Power Quality](https://img.shields.io/badge/Power_Quality-THD_Mitigation-green)](https://en.wikipedia.org/wiki/Total_harmonic_distortion)
 [![Field](https://img.shields.io/badge/Field-Electrical_Power_Engineering-gold)](https://en.wikipedia.org/wiki/Power_engineering)
 
